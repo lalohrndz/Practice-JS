@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CDN MaterializeCSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+    <title>Ejercicios 2</title>
+</head>
+<body>
+    <ul id="ejercicios" class="dropdown-content">
+      <li><a href="Ejercicios1.html">Ejercicios 1/10</a></li>
+      <li><a href="Ejercicios2.html">Ejercicios 2/10</a></li>
+      <li><a href="Ejercicios3.html">Ejercicios 3/10</a></li>
+      <li><a href="Ejercicios4.html">Ejercicios 4/10</a></li>
+      <li><a href="Ejercicios5.html">Ejercicios 5/10</a></li>
+      <li><a href="Ejercicios6.html">Ejercicios 6/10</a></li>
+      <li><a href="Ejercicios7.html">Ejercicios 7/10</a></li>
+      <li><a href="Ejercicios8.html">Ejercicios 8/10</a></li>
+      <li><a href="Ejercicios9.html">Ejercicios 9/10</a></li>
+    </ul>
+
+    <ul id="ejercicios-mobile" class="dropdown-content">
+      <li><a href="Ejercicios1.html">Ejercicios 1/10</a></li>
+      <li><a href="Ejercicios2.html">Ejercicios 2/10</a></li>
+      <li><a href="Ejercicios3.html">Ejercicios 3/10</a></li>
+      <li><a href="Ejercicios4.html">Ejercicios 4/10</a></li>
+      <li><a href="Ejercicios5.html">Ejercicios 5/10</a></li>
+      <li><a href="Ejercicios6.html">Ejercicios 6/10</a></li>
+      <li><a href="Ejercicios7.html">Ejercicios 7/10</a></li>
+      <li><a href="Ejercicios8.html">Ejercicios 8/10</a></li>
+      <li><a href="Ejercicios9.html">Ejercicios 9/10</a></li>
+    </ul>
+
+    <nav>
+      <div class="nav-wrapper">
+        <div class="left">
+          <img src="Assets/Img/logo_transparent_recortado.png" alt="EddPstr Logo" class="hide-on-med-and-down">
+          <p class="brand-logo center">Ejercicios 2</p>
+        </div>
+
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="Index.html">Fundamentos JS</a></li>
+          <li><a href="Modulos.html">Modulos JS</a></li>
+          <li><a class="dropdown-trigger" href="#!" data-target="ejercicios">Ejercicios<i class="material-icons right">arrow_drop_down</i></a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="Index.html">Fundamentos JS</a></li>
+        <li><a href="Modulos.html">Modulos JS</a></li>
+        <li><a class="dropdown-trigger" href="#!" data-target="ejercicios-mobile">Ejercicios<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+
+    <main class="container">
+
+        <div class="title">
+            <h4>Ejercicios de Lógica de programación 2 / 10</h4>
+        </div>
+        
+        <div class="row">
+          <div class="card">
+              <div class="card-content">
+                <p> <b>1)</b> Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".</p>
+              </div>
+              <div class="card-tabs">
+                <ul class="tabs tabs-fixed-width">
+                  <li class="tab"><a class="active" href="#2-1-run">Run</a></li>
+                  <li class="tab"><a href="#2-1-code">Código JS</a></li>
+                </ul>
+              </div>
+              <div class="card-content grey lighten-4">
+                <div id="2-1-run">
+                    <form onsubmit="return false">
+                        <label for="text-2-1-run">Ingresa tu texto.</label>
+                        <input id="text-2-1-run" type="text" class="validate">
+                        <button class="btn" onclick="reversedWord()">Run</button>
+                    </form>
+                </div>
+                <div id="2-1-code">
+                  <code>
+                      let text = document.getElementById("text-2-1-run").value;
+                      let splitedText = text.split("");
+                      let reversedText = splitedText.reverse().join("");
+                  
+                      M.toast({html: `La palabra "${text}" inversa es: ${reversedText}`});
+                      console.log("Primer ej - ", reversedText);
+                  </code>
+                </div>
+              </div>
+          </div>
+  
+          <div class="card">
+              <div class="card-content">
+                <p> <b>2)</b> Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.</p>
+              </div>
+              <div class="card-tabs">
+                <ul class="tabs tabs-fixed-width">
+                  <li class="tab"><a class="active" href="#2-2-run">Run</a></li>
+                  <li class="tab"><a href="#2-2-code">Código JS</a></li>
+                </ul>
+              </div>
+              <div class="card-content grey lighten-4">
+                <div id="2-2-run">
+                    <form onsubmit="return false">
+                        <label for="text-2-2-run">Ingresa tu texto.</label>
+                        <input id="text-2-2-run" type="text" class="validate">
+  
+                        <label for="word-2-2-run">Ingresa tu texto.</label>
+                        <input id="word-2-2-run" type="text" class="validate">
+                        <button class="btn" onclick="nRepeatedWord()">Run</button>
+                    </form>
+                </div>
+                <div id="2-2-code">
+                  let text = document.getElementById("text-2-2-run").value;
+                  let searchWord = document.getElementById("word-2-2-run").value;
+                  
+                  let regex = new RegExp(`${searchWord}`,"ig");
+                  let Search = [...text.matchAll(regex)];
+              
+                  M.toast({html: `Del texto: "${text}"`});
+                  M.toast({html: `Se encontraron: ${Search.length} coincidencias de la palabra ${searchWord}`});
+                  console.log("Segundo Ej. - ",Search);
+                  </code>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="card">
+            <div class="card-content">
+              <p> <b>3)</b> Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.</p>
+            </div>
+            <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a class="active" href="#2-3-run">Run</a></li>
+                <li class="tab"><a href="#2-3-code">Código JS</a></li>
+              </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+              <div id="2-3-run">
+                  <form onsubmit="return false">
+                      <label for="text-2-3-run">Ingresa tu texto.</label>
+                      <input id="text-2-3-run" type="text" class="validate">
+                      <button class="btn" onclick="palindrome()">Run</button>
+                  </form>
+              </div>
+              <div id="2-3-code">
+                let splittedText = text.split(" ").join("");
+                let reversedText = splittedText.split("").reverse().join("");
+            
+                let isPalindrome = (splittedText == reversedText) ? M.toast({html: `El texto: "${text}" SI es un palíndromo!`})
+                : M.toast({html: `El texto: "${text}" NO es un palíndromo!`});
+                
+                console.log("Tercer Ej. - ",splittedText);
+                console.log("Tercer Ej. - ",reversedText);
+              </div>
+            </div>
+          </div>
+  
+          <div class="card">
+            <div class="card-content">
+              <p> <b>4)</b> Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.</p>
+            </div>
+            <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a class="active" href="#2-4-run">Run</a></li>
+                <li class="tab"><a href="#2-4-code">Código JS</a></li>
+              </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+              <div id="2-4-run">
+                  <form onsubmit="return false">
+                      <label for="text-2-4-run">Ingresa tu texto.</label>
+                      <input id="text-2-4-run" type="text" class="validate">
+  
+                      <label for="text2-2-4-run">Patrón a eliminar.</label>
+                      <input id="text2-2-4-run" type="text" class="validate">
+                      <button class="btn" onclick="deleteChar()">Run</button>
+                  </form>
+              </div>
+              <div id="2-4-code">
+                let text = document.getElementById("text-2-4-run").value;
+                let replaceText = document.getElementById("text2-2-4-run").value;
+                let newText = text.replaceAll(replaceText,"");
+            
+                M.toast({html: `Del texto ${text} se eliminó el patrón de ${replaceText} y da como resultado: `});
+                M.toast({html: `${newText}`});
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </main>
+    <!--CDN MaterializeCSS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        M.AutoInit();
+    </script>
+
+    <script src="Js/1 Ejercicios/2.js"></script>
+</body>
+</html>

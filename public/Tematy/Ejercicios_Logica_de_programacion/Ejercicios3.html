@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CDN MaterializeCSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+    <title>Ejercicios 3</title>
+</head>
+<body>
+    <ul id="ejercicios" class="dropdown-content">
+      <li><a href="Ejercicios1.html">Ejercicios 1/10</a></li>
+      <li><a href="Ejercicios2.html">Ejercicios 2/10</a></li>
+      <li><a href="Ejercicios3.html">Ejercicios 3/10</a></li>
+      <li><a href="Ejercicios4.html">Ejercicios 4/10</a></li>
+      <li><a href="Ejercicios5.html">Ejercicios 5/10</a></li>
+      <li><a href="Ejercicios6.html">Ejercicios 6/10</a></li>
+      <li><a href="Ejercicios7.html">Ejercicios 7/10</a></li>
+      <li><a href="Ejercicios8.html">Ejercicios 8/10</a></li>
+      <li><a href="Ejercicios9.html">Ejercicios 9/10</a></li>
+    </ul>
+
+    <ul id="ejercicios-mobile" class="dropdown-content">
+      <li><a href="Ejercicios1.html">Ejercicios 1/10</a></li>
+      <li><a href="Ejercicios2.html">Ejercicios 2/10</a></li>
+      <li><a href="Ejercicios3.html">Ejercicios 3/10</a></li>
+      <li><a href="Ejercicios4.html">Ejercicios 4/10</a></li>
+      <li><a href="Ejercicios5.html">Ejercicios 5/10</a></li>
+      <li><a href="Ejercicios6.html">Ejercicios 6/10</a></li>
+      <li><a href="Ejercicios7.html">Ejercicios 7/10</a></li>
+      <li><a href="Ejercicios8.html">Ejercicios 8/10</a></li>
+      <li><a href="Ejercicios9.html">Ejercicios 9/10</a></li>
+    </ul>
+    
+    <nav>
+      <div class="nav-wrapper">
+        <div class="left">
+          <img src="Assets/Img/logo_transparent_recortado.png" alt="EddPstr Logo" class="hide-on-med-and-down">
+          <p class="brand-logo center">Ejercicios 3</p>
+        </div>
+
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="Index.html">Fundamentos JS</a></li>
+          <li><a href="Modulos.html">Modulos JS</a></li>
+          <li><a class="dropdown-trigger" href="#!" data-target="ejercicios">Ejercicios<i class="material-icons right">arrow_drop_down</i></a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="Index.html">Fundamentos JS</a></li>
+        <li><a href="Modulos.html">Modulos JS</a></li>
+        <li><a class="dropdown-trigger" href="#!" data-target="ejercicios-mobile">Ejercicios<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+
+    <main class="container">
+
+        <div class="title">
+            <h4>Ejercicios de Lógica de programación 3 / 10</h4>
+        </div>
+        
+        <div class="row">
+          <div class="card">
+              <div class="card-content">
+                <p> <b>1)</b> Programa una función que obtenga un numero aleatorio entre 501 y 600.</p>
+              </div>
+              <div class="card-tabs">
+                <ul class="tabs tabs-fixed-width">
+                  <li class="tab"><a class="active" href="#3-1-run">Run</a></li>
+                  <li class="tab"><a href="#3-1-code">Código JS</a></li>
+                </ul>
+              </div>
+              <div class="card-content grey lighten-4">
+                <div id="3-1-run">
+                    <form onsubmit="return false">
+                      <label for="nMin-3-2-run">Ingresa un número mínimo.</label>
+                      <input id="nMin-3-2-run" type="number" class="validate">
+                      <label for="nMax-3-2-run">Ingresa un número máximo.</label>
+                      <input id="nMax-3-2-run" type="number" class="validate">
+                      <button class="btn" onclick="nRandom()">Run</button>
+                    </form>
+                </div>
+                <div id="3-1-code">
+                  <code>
+                      let nMin = document.getElementById("nMin-3-2-run").value;
+                      let nMax = document.getElementById("nMax-3-2-run").value;
+  
+                      let n = Math.abs(Math.floor(Math.random() * (nMin - nMax)) - nMin);
+                      M.toast({html:`Tu número random es: ${n}`});
+                  </code>
+                </div>
+              </div>
+          </div>
+  
+          <div class="card">
+              <div class="card-content">
+                <p> <b>2)</b> Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true.</p>
+              </div>
+              <div class="card-tabs">
+                <ul class="tabs tabs-fixed-width">
+                  <li class="tab"><a class="active" href="#3-2-run">Run</a></li>
+                  <li class="tab"><a href="#3-2-code">Código JS</a></li>
+                </ul>
+              </div>
+              <div class="card-content grey lighten-4">
+                <div id="3-2-run">
+                    <form onsubmit="return false">
+                        <label for="number-3-2-run">Ingresa tu número.</label>
+                        <input id="number-3-2-run" type="number" class="validate">
+                        <button class="btn" onclick="nCapicua()">Run</button>
+                    </form>
+                </div>
+                <div id="3-2-code">
+                  <code>
+                  let n = document.getElementById("number-3-2-run").value;
+  
+                  let nSplitted = n.split("");
+                  let nReversed = nSplitted.reverse().join("");
+  
+                  let result = (n == nReversed) ? M.toast({html:` ${n} is a capicua numbrer!`}) : M.toast({html:`${n} is NOT a capicua number`});
+                  </code>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="card">
+              <div class="card-content">
+                <p> <b>3)</b> Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120.</p>
+              </div>
+              <div class="card-tabs">
+                <ul class="tabs tabs-fixed-width">
+                  <li class="tab"><a class="active" href="#3-3-run">Run</a></li>
+                  <li class="tab"><a href="#3-3-code">Código JS</a></li>
+                </ul>
+              </div>
+              <div class="card-content grey lighten-4">
+                <div id="3-3-run">
+                    <form onsubmit="return false">
+                        <label for="number-3-3-run">Ingresa tu número.</label>
+                        <input id="number-3-3-run" type="number" class="validate">
+                        <button class="btn" onclick="nFactorial()">Run</button>
+                    </form>
+                </div>
+                <div id="3-3-code">
+                  <code>
+                      let n = document.getElementById("number-3-3-run").value;
+                      n = parseInt(n,10);
+                      nInit = n;
+  
+                      if(n === 0 || n === 1){
+                          M.toast({html:`The factorial number is 1!`});
+                      }else if(n < 0){
+                          M.toast({html:`The number must be greater than zero.`});
+                      }else{
+                          let i = n;
+                          while(n > 1){
+                              i = i * (n - 1);
+                              n--;
+                          }
+                          M.toast({html:`The factorial number of ${nInit} is ${i}`});
+                      }
+                  </code>
+                </div>
+              </div>
+          </div>
+        </div>
+
+
+    </main>
+    <!--CDN MaterializeCSS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        M.AutoInit();
+    </script>
+
+    <script src="Js/1 Ejercicios/3.js"></script>
+</body>
+</html>

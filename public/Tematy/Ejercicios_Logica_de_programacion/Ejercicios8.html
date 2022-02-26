@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CDN MaterializeCSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+    <title>Ejercicios 8</title>
+</head>
+<body>
+  <ul id="ejercicios" class="dropdown-content">
+    <li><a href="Ejercicios1.html">Ejercicios 1/10</a></li>
+    <li><a href="Ejercicios2.html">Ejercicios 2/10</a></li>
+    <li><a href="Ejercicios3.html">Ejercicios 3/10</a></li>
+    <li><a href="Ejercicios4.html">Ejercicios 4/10</a></li>
+    <li><a href="Ejercicios5.html">Ejercicios 5/10</a></li>
+    <li><a href="Ejercicios6.html">Ejercicios 6/10</a></li>
+    <li><a href="Ejercicios7.html">Ejercicios 7/10</a></li>
+    <li><a href="Ejercicios8.html">Ejercicios 8/10</a></li>
+    <li><a href="Ejercicios9.html">Ejercicios 9/10</a></li>
+  </ul>
+
+  <ul id="ejercicios-mobile" class="dropdown-content">
+    <li><a href="Ejercicios1.html">Ejercicios 1/10</a></li>
+    <li><a href="Ejercicios2.html">Ejercicios 2/10</a></li>
+    <li><a href="Ejercicios3.html">Ejercicios 3/10</a></li>
+    <li><a href="Ejercicios4.html">Ejercicios 4/10</a></li>
+    <li><a href="Ejercicios5.html">Ejercicios 5/10</a></li>
+    <li><a href="Ejercicios6.html">Ejercicios 6/10</a></li>
+    <li><a href="Ejercicios7.html">Ejercicios 7/10</a></li>
+    <li><a href="Ejercicios8.html">Ejercicios 8/10</a></li>
+    <li><a href="Ejercicios9.html">Ejercicios 9/10</a></li>
+</ul>
+
+  <nav>
+    <div class="nav-wrapper">
+      <div class="left">
+        <img src="Assets/Img/logo_transparent_recortado.png" alt="EddPstr Logo" class="hide-on-med-and-down">
+        <p class="brand-logo center">Ejercicios 8</p>
+      </div>
+
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="Index.html">Fundamentos JS</a></li>
+        <li><a href="Modulos.html">Modulos JS</a></li>
+        <li><a class="dropdown-trigger" href="#!" data-target="ejercicios">Ejercicios<i class="material-icons right">arrow_drop_down</i></a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <ul class="sidenav" id="mobile-demo">
+      <li><a href="Index.html">Fundamentos JS</a></li>
+      <li><a href="Modulos.html">Modulos JS</a></li>
+      <li><a class="dropdown-trigger" href="#!" data-target="ejercicios-mobile">Ejercicios<i class="material-icons right">arrow_drop_down</i></a></li>
+  </ul>
+
+      <main class="container">
+
+        <div class="title">
+            <h4>Ejercicios de Lógica de programación 8 / 10</h4>
+        </div>
+
+        <div class="cards">
+
+          <div class="card">
+              <div class="card-content">
+                  <p> <b>1)</b> Programa una función que dado un arreglo de números devuelva un objeto con dos arreglos, el primero tendrá los numeros ordenados en forma ascendente y el segundo de forma descendiente, pe. miFuncion([7, 5,7,8,6]) devolverá { asc: [5,6,7,7,8], desc: [8,7,7,6,5] }.</p>
+              </div>
+              <div class="card-tabs">
+                  <ul class="tabs tabs-fixed-width">
+                  <li class="tab"><a class="active" href="#8-1-run">Run</a></li>
+                  <li class="tab"><a href="#8-1-code">Código JS</a></li>
+                  </ul>
+              </div>
+              <div class="card-content grey lighten-4">
+                  <div id="8-1-run">
+                      <form onsubmit="return false">
+                          <label for="num-8-1-run">Ingresa tu número.</label>
+                          <input id="num-8-1-run" type="number" class="validate">
+                          <button class="btn" onclick="ascDescNumbers(document.getElementById('num-8-1-run').value)">Add number</button>
+                          <div style="margin-top:1em;">
+                              <p>Lista de números:</p>
+                              <div id="userList"></div>
+                              <hr>
+                              <p>Números ascendentes:</p>
+                              <div id="ascResultNumbers"></div>
+                              <hr>
+                              <p>Números descendientes:</p>
+                              <div id="descResultNumbers"></div>
+                              <hr>
+                            </div>
+                      </form>
+                  </div>
+                  <div id="8-1-code">
+                  <code>
+                    const ascDescNumbers = (number) =>{
+                      this.number = number;
+                      number = parseInt(number);
+                      console.log(typeof number);
+                      let userResultList = document.getElementById("userList");
+                      let ascResultNumbers = document.getElementById("ascResultNumbers");
+                      let descResultNumbers = document.getElementById("descResultNumbers");
+                  
+                      userList.push(number);
+                      userResultList.innerHTML = `<p>${userList}</p>`;
+                  
+                      ascNumbers = userList.sort(function(fisrtNumber,secondNumber){
+                          return fisrtNumber - secondNumber;
+                      });
+                      ascResultNumbers.innerHTML = `<p>${ascNumbers}</p>`;
+                  
+                      descNumbers = userList.sort(function(fisrtNumber,secondNumber){
+                          return secondNumber - fisrtNumber;
+                      });
+                      descResultNumbers.innerHTML = `<p>${descNumbers}</p>`;
+                      console.log("First Ex. - ",userList);
+                      console.log("First Ex. - ",ascNumbers);
+                      console.log("First Ex. - ",descNumbers);
+                  }
+                  </code>
+                  </div>
+              </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+                <p> <b>2)</b> Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true].</p>
+            </div>
+            <div class="card-tabs">
+                <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a class="active" href="#8-2-run">Run</a></li>
+                <li class="tab"><a href="#8-2-code">Código JS</a></li>
+                </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+                <div id="8-2-run">
+                    <form onsubmit="return false">
+                        <label for="char-8-2-run">Ingresa tu número.</label>
+                        <input id="char-8-2-run" type="text" class="validate">
+                        <button class="btn" onclick="deleteRepeatedChars(document.getElementById('char-8-2-run').value)">Add Character</button>
+                        <div style="margin-top:1em;">
+                            <p>Lista de elementos:</p>
+                            <div id="charList"></div>
+                            <hr>
+                            <p>Lista filtrada:</p>
+                            <div id="resultList"></div>
+                          </div>
+                    </form>
+                </div>
+                <div id="8-2-code">
+                <code>
+                  this.char = char;
+                  let userList = document.getElementById("charList");
+                  let resultCharList = document.getElementById("resultList");
+                  
+                  charFilteredList.add(char);
+                  charList.push(char);
+              
+                  resultList = [... charFilteredList];
+              
+                  userList.innerHTML = `<p>${charList}</p>`;
+                  resultCharList.innerHTML = `<p>${resultList}</p>`
+                </code>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+              <p> <b>3)</b> Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.</p>
+          </div>
+          <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width">
+              <li class="tab"><a class="active" href="#8-3-run">Run</a></li>
+              <li class="tab"><a href="#8-3-code">Código JS</a></li>
+              </ul>
+          </div>
+          <div class="card-content grey lighten-4">
+              <div id="8-3-run">
+                  <form onsubmit="return false">
+                      <label for="num-8-3-run">Ingresa tu número.</label>
+                      <input id="num-8-3-run" type="number" class="validate">
+                      <button class="btn" onclick="promedio(document.getElementById('num-8-3-run').value)">Add Character</button>
+                      <div style="margin-top:1em;">
+                          <p>Lista de elementos:</p>
+                          <div id="numberList"></div>
+                          <hr>
+                          <p>Promedio actual</p>
+                          <div id="resultadoPromedio"></div>
+                        </div>
+                  </form>
+              </div>
+              <div id="8-3-code">
+              <code>
+                this.number = number;
+                number = parseInt(number);
+                let numberList = document.getElementById("numberList");
+                let resultadoPromedio = document.getElementById("resultadoPromedio");
+                let promedio;
+                let index = 0;
+                
+                numbers.push(number);
+                numberList.innerHTML = `<p>${numbers}</p>`
+            
+                promedio = numbers.reduce((lastNumber,currentNumber)=>lastNumber + currentNumber,index);
+                result = promedio / numbers.length;
+                resultadoPromedio.innerHTML = `<p>${result}</p>`;
+            
+                console.log("number list: ",numbers);
+                console.log("promedio: ",promedio);
+                console.log("result: ",result);
+              </code>
+              </div>
+          </div>
+      </div>
+
+        </div>
+
+      </main>
+        <!--CDN MaterializeCSS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script>
+            M.AutoInit();
+        </script>
+
+        <script src="Js/1 Ejercicios/8.js"></script>
+</body>
+</html>

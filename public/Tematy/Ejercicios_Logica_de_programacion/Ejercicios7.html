@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CDN MaterializeCSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+    <title>Ejercicios 6</title>
+</head>
+<body>
+  <ul id="ejercicios" class="dropdown-content">
+    <li><a href="Ejercicios1.html">Ejercicios 1/10</a></li>
+    <li><a href="Ejercicios2.html">Ejercicios 2/10</a></li>
+    <li><a href="Ejercicios3.html">Ejercicios 3/10</a></li>
+    <li><a href="Ejercicios4.html">Ejercicios 4/10</a></li>
+    <li><a href="Ejercicios5.html">Ejercicios 5/10</a></li>
+    <li><a href="Ejercicios6.html">Ejercicios 6/10</a></li>
+    <li><a href="Ejercicios7.html">Ejercicios 7/10</a></li>
+    <li><a href="Ejercicios8.html">Ejercicios 8/10</a></li>
+    <li><a href="Ejercicios9.html">Ejercicios 9/10</a></li>
+  </ul>
+
+  <ul id="ejercicios-mobile" class="dropdown-content">
+    <li><a href="Ejercicios1.html">Ejercicios 1/10</a></li>
+    <li><a href="Ejercicios2.html">Ejercicios 2/10</a></li>
+    <li><a href="Ejercicios3.html">Ejercicios 3/10</a></li>
+    <li><a href="Ejercicios4.html">Ejercicios 4/10</a></li>
+    <li><a href="Ejercicios5.html">Ejercicios 5/10</a></li>
+    <li><a href="Ejercicios6.html">Ejercicios 6/10</a></li>
+    <li><a href="Ejercicios7.html">Ejercicios 7/10</a></li>
+    <li><a href="Ejercicios8.html">Ejercicios 8/10</a></li>
+    <li><a href="Ejercicios9.html">Ejercicios 9/10</a></li>
+</ul>
+
+  <nav>
+    <div class="nav-wrapper">
+      <div class="left">
+        <img src="Assets/Img/logo_transparent_recortado.png" alt="EddPstr Logo" class="hide-on-med-and-down">
+        <p class="brand-logo center">Ejercicios 7</p>
+      </div>
+
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="Index.html">Fundamentos JS</a></li>
+        <li><a href="Modulos.html">Modulos JS</a></li>
+        <li><a class="dropdown-trigger" href="#!" data-target="ejercicios">Ejercicios<i class="material-icons right">arrow_drop_down</i></a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <ul class="sidenav" id="mobile-demo">
+      <li><a href="Index.html">Fundamentos JS</a></li>
+      <li><a href="Modulos.html">Modulos JS</a></li>
+      <li><a class="dropdown-trigger" href="#!" data-target="ejercicios-mobile">Ejercicios<i class="material-icons right">arrow_drop_down</i></a></li>
+  </ul>
+
+      <main class="container">
+
+        <div class="title">
+            <h4>Ejercicios de Lógica de programación 7 / 10</h4>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <div class="card-content">
+                    <p> <b>1)</b> Programa una función que dado un array numérico devuelve otro array con los números elevados al cuadrado, pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25].</p>
+                </div>
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width">
+                    <li class="tab"><a class="active" href="#7-1-run">Run</a></li>
+                    <li class="tab"><a href="#7-1-code">Código JS</a></li>
+                    </ul>
+                </div>
+                <div class="card-content grey lighten-4">
+                    <div id="7-1-run">
+                        <form onsubmit="return false">
+                            <label for="num-7-1-run">Ingresa tu número.</label>
+                            <input id="num-7-1-run" type="number" class="validate">
+                            <button class="btn" onclick="risedNumbers(true,document.getElementById('num-7-1-run').value)">Add number</button>
+                            <button class="btn" onclick="risedNumbers(false)">Run</button>
+                            <div style="margin-top:1em;">
+                              <p>Lista de números:</p>
+                              <div id="userList"></div>
+                              <hr>
+                              <p>Lista de números elevados:</p>
+                              <div id="raisedList"></div>
+                              <hr>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="7-1-code">
+                    <code>
+                      let userNumber = [];
+                      let calcNumbers = [];
+                      
+                      const risedNumbers = (isNumberAdded,number) =>{
+                          this.isNumberAdded = isNumberAdded;
+                          this.number = number;
+                          let userList = document.getElementById("userList");
+                          let raisedList = document.getElementById("raisedList");
+                      
+                          if(isNumberAdded){
+                              userNumber.push(number);
+                              userList.innerHTML = `<p>${userNumber}</p>`;
+                              console.log("First Ex. - ",userNumber);
+                          }else{
+                              calcNumbers = userNumber.map(raiseNumbers);
+                              raisedList.innerHTML = `<p>${calcNumbers}</p>`;
+                              console.log(calcNumbers);
+                          }
+                      }
+                      
+                      const raiseNumbers = (number) =>{
+                          this.number = number;
+                          return Math.pow(number,2);
+                      }
+                    </code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+              <div class="card-content">
+                  <p> <b>2)</b>  Programa una función que dado un array devuelva el número mas alto y el más bajo de dicho array, pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60].</p>
+              </div>
+              <div class="card-tabs">
+                  <ul class="tabs tabs-fixed-width">
+                  <li class="tab"><a class="active" href="#7-2-run">Run</a></li>
+                  <li class="tab"><a href="#7-2-code">Código JS</a></li>
+                  </ul>
+              </div>
+              <div class="card-content grey lighten-4">
+                  <div id="7-2-run">
+                      <form onsubmit="return false">
+                        <label for="num-7-2-run">Ingresa tu número.</label>
+                        <input id="num-7-2-run" type="number" class="validate">
+                        <button class="btn" onclick="numbersList(true,document.getElementById('num-7-2-run').value)">Add number</button>
+                        <button class="btn" onclick="numbersList(false)">Run</button>
+                        <div style="margin-top:1em;">
+                          <p>Lista de números:</p>
+                          <div id="userList2"></div>
+                          <hr>
+                          <p>Número más pequeño y más alto:</p>
+                          <div id="resultNumbersList"></div>
+                          <hr>
+                        </div>
+                      </form>
+                  </div>
+                  <div id="7-2-code">
+                  <code>
+                    let userNumber2 = [];
+                    let calcNumbers2 = [];
+                    const numbersList = (isNumberAdded,number) => {
+                        this.isNumberAdded = isNumberAdded;
+                        this.number = number;
+                        let userList2 = document.getElementById("userList2");
+                        let resultNumberList = document.getElementById("resultNumbersList");
+                    
+                        if(isNumberAdded){
+                            userNumber2.push(number);
+                            calcNumbers2.push(number);
+                            userList2.innerHTML = `<p>${userNumber2}</p>`;
+                            console.log("Second Ex. - ", userNumber2);
+                        }else{
+                            calcNumbers2.sort(function(firstNum,secondNum){return firstNum - secondNum});
+                            resultNumberList.innerHTML = `<p>${calcNumbers2[0]},${calcNumbers2[calcNumbers2.length - 1]}</p>`
+                        }
+                  </code>
+                  </div>
+              </div>
+          </div>
+
+        <div class="card">
+            <div class="card-content">
+                <p> <b>3)</b> Programa una función que dado un array de números devuelva un objeto con 2 arreglos en el primero almacena los números pares y en el segundo los impares, pe. miFuncion([1,2,3,4,5,6,7,8,9,0]) devolverá {pares: [2,4,6,8,0], impares: [1,3,5,7,9]}.</p>
+            </div>
+            <div class="card-tabs">
+                <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a class="active" href="#7-3-run">Run</a></li>
+                <li class="tab"><a href="#7-3-code">Código JS</a></li>
+                </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+                <div id="7-3-run">
+                    <form onsubmit="return false">
+                        <label for="num-7-3-run">Ingresa tu texto.</label>
+                        <input id="num-7-3-run" type="number" class="validate">
+                        <button class="btn" onclick="oddOrEven(document.getElementById('num-7-3-run').value)">Add number</button>
+                        <div style="margin-top:1em;">
+                            <p>Lista de números:</p>
+                            <div id="userList3"></div>
+                            <hr>
+                            <p>Números pares:</p>
+                            <div id="evenResultList"></div>
+                            <hr>
+                            <p>Números impares:</p>
+                            <div id="oddResultList"></div>
+                            <hr>
+                          </div>
+                    </form>
+                </div>
+                <div id="7-3-code">
+                <code>
+                    const oddOrEven = (number) =>{
+                        this.number = number;
+                        let userList3 = document.getElementById("userList3");
+                        let evenResultList = document.getElementById("evenResultList");
+                        let oddResultList = document.getElementById("oddResultList");
+                    
+                        userList.push(number);
+                        userList3.innerHTML = `<p>${userList}</p>`;
+                        if(number%2===0){
+                            evenList.push(number);
+                            evenResultList.innerHTML = `<p>${evenList}</p>`;
+                            console.log("Third ex. - ",evenList);
+                        }else{
+                            oddList.push(number);
+                            oddResultList.innerHTML = `<p>${oddList}</p>`;
+                            console.log("Third ex. - ",oddList);
+                        }
+                    }
+                </code>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        </main>
+        <!--CDN MaterializeCSS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script>
+            M.AutoInit();
+        </script>
+
+        <script src="Js/1 Ejercicios/7.js"></script>
+</body>
+</html>
