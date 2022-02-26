@@ -5,42 +5,44 @@
     <sergey-import src="Metas/titles">Fundamentos</sergey-import>
 </head>
 <body>
+    <h1>test</h1>
+    <sergey-import src="header">test</sergey-import>
+
     <main class="container">
-
-
         <div class="cards">
-        <div class="card">
-            <div class="card-content">
-            <p> <b>1)</b> Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.</p>
-            </div>
-            <div class="card-tabs">
-            <ul class="tabs tabs-fixed-width">
-                <li class="tab"><a class="active" href="#1-1-run">Run</a></li>
-                <li class="tab"><a href="#1-1-code">Código JS</a></li>
-            </ul>
-            </div>
-            <div class="card-content grey lighten-4">
-            <div id="1-1-run">
-                <form onsubmit="return false">
-                    <label for="text-1-1-run">Ingresa tu texto.</label>
-                    <input id="text-1-1-run" type="text" class="validate">
-                    <button class="btn" onclick="nCaracteres()">Run</button>
-                </form>
-            </div>
-            <div id="1-1-code">
-                <code>
-                const nCaracteres = () => {
-                    let text = document.getElementById("text-1-1-run").value;
-                    M.toast({html: `La palabra "${text}" tiene ${text.length} caracteres`});
-                    console.log("Primer ejercicio - ",text.length);
-                }  
-                </code>
-            </div>
+            <div class="card">
+                <div class="card-content">
+                <p> <b>1)</b> Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.</p>
+                </div>
+                <div class="card-tabs">
+                <ul class="tabs tabs-fixed-width">
+                    <li class="tab"><a class="active" href="#1-1-run">Run</a></li>
+                    <li class="tab"><a href="#1-1-code">Código JS</a></li>
+                </ul>
+                </div>
+                <div class="card-content grey lighten-4">
+                <div id="1-1-run">
+                    <form onsubmit="return false">
+                        <label for="text-1-1-run">Ingresa tu texto.</label>
+                        <input id="text-1-1-run" type="text" class="validate">
+                        <button class="btn" onclick="nCaracteres()">Run</button>
+                    </form>
+                </div>
+                <div id="1-1-code">
+                    <code>
+                    const nCaracteres = () => {
+                        let text = document.getElementById("text-1-1-run").value;
+                        M.toast({html: `La palabra "${text}" tiene ${text.length} caracteres`});
+                        console.log("Primer ejercicio - ",text.length);
+                    }  
+                    </code>
+                </div>
+                </div>
             </div>
         </div>
     </main>
 
-        <script src="Js/1 Ejercicios/1.js"></script>
-
+    <sergey-import src="footerScripts"></sergey-import>
+    <script src="JS/1.js"></script>
 </body>
 </html>
