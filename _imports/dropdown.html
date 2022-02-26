@@ -1,0 +1,22 @@
+<script>
+let ejercicios = document.getElementById("ejercicios");
+let ejerciciosDropdown = document.getElementById("dropdown-container");
+let logicaDeProgramacion = document.getElementById("logicaDeProgramacion");
+let logicaDeProgramacionDropdown = document.getElementById("logicaDeProgramacion-dropdown")
+
+ejercicios.addEventListener("click",function(){
+    if(ejerciciosDropdown.style.display == "block"){
+        ejerciciosDropdown.style.display = "none";
+    }else{
+        ejerciciosDropdown.style.display = "block";
+    }
+});
+
+logicaDeProgramacion.addEventListener("click",function(){
+    if(logicaDeProgramacionDropdown.style.display == "block"){
+        logicaDeProgramacionDropdown.style.display = "none";
+    }else{
+        logicaDeProgramacionDropdown.style.display = "block";
+    }
+})
+</script>

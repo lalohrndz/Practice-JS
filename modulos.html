@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <sergey-import src="head"></sergey-import>
+    <sergey-import src="Metas/titles">Módulos</sergey-import>
+</head>
+<body>
+    <sergey-import src="header">Módulos</sergey-import>
+
+
+    <sergey-import src="dropdown"></sergey-import>
+
+    <!--  
+      - Para los archivos de JavaScript que importen otros archivos JavaScript de forma interna,
+      - si la etiqueta <script></script> no tiene la propiedad ( type="module" ) las importaciones
+      - marcarían un error
+
+      ? Para evitar que el navegador cargue ambos archivos se debe de agregar la propiedad nomdule para
+      ? los navegadores que no soporten los módulos
+    -->
+    <script src="Js/ObjetosyFuncionesDelLengaje/ImportExport.js" type="module"></script>
+    <script src="Js/ObjetosyFuncionesDelLengaje/no-modulos.js" nomodule></script>
+</body>
+</html>

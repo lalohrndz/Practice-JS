@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CDN MaterializeCSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+    <title>Ejercicios 5</title>
+</head>
+<body>
+  <ul id="ejercicios" class="dropdown-content">
+    <li><a href="Ejercicios1.html">Ejercicios 1/10</a></li>
+    <li><a href="Ejercicios2.html">Ejercicios 2/10</a></li>
+    <li><a href="Ejercicios3.html">Ejercicios 3/10</a></li>
+    <li><a href="Ejercicios4.html">Ejercicios 4/10</a></li>
+    <li><a href="Ejercicios5.html">Ejercicios 5/10</a></li>
+    <li><a href="Ejercicios6.html">Ejercicios 6/10</a></li>
+    <li><a href="Ejercicios7.html">Ejercicios 7/10</a></li>
+    <li><a href="Ejercicios8.html">Ejercicios 8/10</a></li>
+    <li><a href="Ejercicios9.html">Ejercicios 9/10</a></li>
+  </ul>
+
+  <ul id="ejercicios-mobile" class="dropdown-content">
+    <li><a href="Ejercicios1.html">Ejercicios 1/10</a></li>
+    <li><a href="Ejercicios2.html">Ejercicios 2/10</a></li>
+    <li><a href="Ejercicios3.html">Ejercicios 3/10</a></li>
+    <li><a href="Ejercicios4.html">Ejercicios 4/10</a></li>
+    <li><a href="Ejercicios5.html">Ejercicios 5/10</a></li>
+    <li><a href="Ejercicios6.html">Ejercicios 6/10</a></li>
+    <li><a href="Ejercicios7.html">Ejercicios 7/10</a></li>
+    <li><a href="Ejercicios8.html">Ejercicios 8/10</a></li>
+    <li><a href="Ejercicios9.html">Ejercicios 9/10</a></li>
+  </ul>
+
+  <nav>
+    <div class="nav-wrapper">
+      <div class="left">
+        <img src="Assets/Img/logo_transparent_recortado.png" alt="EddPstr Logo" class="hide-on-med-and-down">
+        <p class="brand-logo center">Ejercicios 5</p>
+      </div>
+
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="Index.html">Fundamentos JS</a></li>
+        <li><a href="Modulos.html">Modulos JS</a></li>
+        <li><a class="dropdown-trigger" href="#!" data-target="ejercicios">Ejercicios<i class="material-icons right">arrow_drop_down</i></a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <ul class="sidenav" id="mobile-demo">
+      <li><a href="Index.html">Fundamentos JS</a></li>
+      <li><a href="Modulos.html">Modulos JS</a></li>
+      <li><a class="dropdown-trigger" href="#!" data-target="ejercicios-mobile">Ejercicios<i class="material-icons right">arrow_drop_down</i></a></li>
+  </ul>
+
+      <main class="container">
+
+        <div class="title">
+            <h4>Ejercicios de Lógica de programación 5 / 10</h4>
+        </div>
+        
+        <div class="cards">
+            <div class="card">
+                <div class="card-content">
+                  <p> <b>1)</b> Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10.</p>
+                </div>
+                <div class="card-tabs">
+                  <ul class="tabs tabs-fixed-width">
+                    <li class="tab"><a class="active" href="#5-1-run">Run</a></li>
+                    <li class="tab"><a href="#5-1-code">Código JS</a></li>
+                  </ul>
+                </div>
+                <div class="card-content grey lighten-4">
+                  <div id="5-1-run">
+                      <form onsubmit="return false">
+                          <label for="num-5-1-run">Ingresa tu número.</label>
+                          <input id="num-5-1-run" type="number" class="validate">
+                          
+                          <label for="baseNumber">Selecciona la base a convertir.</label>
+                          <select id="baseNumber">
+                              <option value="1">Binary</option>
+                              <option value="2">Decimal</option>
+                          </select>
+                          <button class="btn" onclick="binToDec()">Run</button>
+                      </form>
+                  </div>
+                  <div id="5-1-code">
+                    <code>
+                      let num = document.getElementById("num-5-1-run").value;
+                      let baseToConvert = document.getElementById("baseNumber").value;
+                  
+                      num = parseInt(num);
+                      baseToConvert = parseInt(baseToConvert);
+                  
+                      if(baseToConvert === 1){
+                          //convert to binary
+                          let result = num >>> 0;
+                          M.toast({html:`The nummber ${num} to binary is: ${result.toString(2)}`});
+                          console.log("First ex. - To binary",result.toString(2));
+                      }   
+                      else{
+                          //Convert to decimal
+                          num = num.toString();
+                          let splittedNum = num.split("").reverse();
+                          let result= 0;
+                          
+                          for (let i = 0; i < splittedNum.length; i++) {
+                              let actualVal = splittedNum[i] * Math.pow(2,i);
+                              result = result + actualVal;
+                              console.log("First ex - iterator: ",i," number: ",splittedNum[i], "actual val: ", actualVal, " result: ",result);
+                          }
+                          M.toast({html:`The nummber ${num} to decimal is: ${result}`});
+                      };
+                    </code>
+                  </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                  <p> <b>2)</b> Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.</p>
+                </div>
+                <div class="card-tabs">
+                  <ul class="tabs tabs-fixed-width">
+                    <li class="tab"><a class="active" href="#5-2-run">Run</a></li>
+                    <li class="tab"><a href="#5-2-code">Código JS</a></li>
+                  </ul>
+                </div>
+                <div class="card-content grey lighten-4">
+                  <div id="5-2-run">
+                      <form onsubmit="return false">
+                          <label for="num-5-2-run">Ingresa tu total.</label>
+                          <input id="num-5-2-run" type="number" class="validate">
+
+                          <label for="num_2-5-2-run">Ingresa tu descuento a aplicar.</label>
+                          <input id="num_2-5-2-run" type="number" class="validate">
+
+                          <button class="btn" onclick="descount()">Run</button>
+                      </form>
+                  </div>
+                  <div id="5-2-code">
+                    <code>
+                        let totalNumber = document.getElementById("num-5-2-run").value;
+                        let descountNumber = document.getElementById("num_2-5-2-run").value;
+                    
+                        totalNumber = parseInt(totalNumber);
+                        descountNumber = parseInt(descountNumber);
+                    
+                        if(totalNumber || descountNumber <= 0){
+                            M.toast({html:`The number must be greater than zero.`})
+                        }else{
+                            result = totalNumber - ((totalNumber * descountNumber) / 100);
+                            M.toast({html:`El ${descountNumber}% de ${totalNumber} es: ${result}`});
+                            console.log("Second ex - ",result);
+                        }
+                    </code>
+                  </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                  <p> <b>2.1)</b> Programa una calculadora de propinas; ésta debe de tomar en cuenta el monto de la cuenta, el porcentaje de propina y el
+                    número de personas que van a cooperar para la cuenta. Al final debe de regresar el total con la propina incluida y en caso de haber más de una
+                    persona cooperando el monto dividido de la cuenta</p>
+                </div>
+                <div class="card-tabs">
+                  <ul class="tabs tabs-fixed-width">
+                    <li class="tab"><a class="active" href="#5-2_1-run">Run</a></li>
+                    <li class="tab"><a href="#5-2_1-code">Código JS</a></li>
+                  </ul>
+                </div>
+                <div class="card-content grey lighten-4">
+                  <div id="5-2_1-run">
+                      <form onsubmit="return false">
+                          <label for="num-5-2_1-run">Ingresa el total de la cuenta.</label>
+                          <input id="num-5-2_1-run" type="number" class="validate" min="1">
+
+                          <label for="num-5-2_2-run">Ingresa el porcenate de propina.</label>
+                          <input id="num-5-2_2-run" type="number" class="validate" min="1">
+
+                          <label for="num-5-2_3-run">Ingresa el número de personas.</label>
+                          <input id="num-5-2_3-run" type="number" class="validate" value="1" min="1" >
+
+                          <button class="btn" onclick="tipCalculator()">Run</button>
+                      </form>
+                  </div>
+                  <div id="5-2_1-code">
+                    <code>
+                        let totalNumber = document.getElementById("num-5-2_1-run").value;
+                        let totalNumber = document.getElementById("num-5-2_1-run").value;
+                        let tipNumber = document.getElementById("num-5-2_2-run").value;
+                        let peopleNumber = document.getElementById("num-5-2_3-run").value;
+                    
+                        totalNumber = parseInt(totalNumber);
+                        tipNumber = parseInt(tipNumber);
+                        peopleNumber = parseInt(peopleNumber);
+                    
+                        let tip = (totalNumber * tipNumber) / 100;
+                        let totalTicket = totalNumber + tip;
+                        let totalPerPerson = totalTicket / peopleNumber;
+                    
+                        M.toast({html:`The amount of the ticket: ${totalNumber}`});
+                        M.toast({html:`Tip %: ${tipNumber}%`});
+                        M.toast({html:`Total of the ticket with the tip: ${totalTicket}`});
+                        M.toast({html:`People on count: ${peopleNumber}`});
+                        M.toast({html:`Total per person: ${totalPerPerson}`});
+                    
+                        console.group("Extra ex.");
+                        console.log("total: ",totalNumber);
+                        console.log("propa: ",tip);
+                        console.log("total ticket: ",totalTicket);
+                        console.log("Per person: ",totalPerPerson);
+                        console.groupEnd();
+                    </code>
+                  </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                  <p> <b>3)</b> Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).</p>
+                </div>
+                <div class="card-tabs">
+                  <ul class="tabs tabs-fixed-width">
+                    <li class="tab"><a class="active" href="#5-3-run">Run</a></li>
+                    <li class="tab"><a href="#5-3-code">Código JS</a></li>
+                  </ul>
+                </div>
+                <div class="card-content grey lighten-4">
+                  <div id="5-3-run">
+                      <form onsubmit="return false">
+                          <label for="date-5-3-run">Ingresa la fecha.</label>
+                          <input id="date-5-3-run" type="date" class="validate">
+
+                          <button class="btn" onclick="yearsToNow()">Run</button>
+                      </form>
+                  </div>
+                  <div id="5-3-code">
+                    <code>
+                      let inputDate = new Date(document.getElementById("date-5-3-run").value);
+                      let todayYear = new Date().getFullYear();
+                  
+                      let inputYear = new Date(inputDate).getFullYear();
+                      let result = todayYear - inputYear;
+                  
+                      M.toast({html:`From ${inputYear} to ${todayYear} has been ${result} years.`});
+                    </code>
+                  </div>
+                </div>
+            </div>
+
+        </main>
+        <!--CDN MaterializeCSS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script>
+            M.AutoInit();
+        </script>
+
+        <script src="Js/1 Ejercicios/5.js"></script>
+</body>
+</html>
