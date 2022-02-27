@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <sergey-import src="head"></sergey-import>
-  <sergey-import src="Metas/titles">Ejercicio 8</sergey-import>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="http://localhost:8080/Assets/CSS/style.css">
+  <title>
+    Ejercicio 8
+</title>
+<meta name="twitter:title" property="og:title" content='Ejercicio 8'>
 </head>
 <body>
-  <sergey-import src="header"></sergey-import>
+  <header>
+	<div class="sidenav-menu">
+		<img src="https://cdn.jsdelivr.net/gh/lalohrndz/CDNAssets@master/Personal/logo_recortado.png" alt="logo">
+		<base href="http://localhost:8080/">
+		<a href="http://localhost:8080/index.html">Fundamentos</a>
+		<a href="modulos.html">Módulos</a>
+		<button id="ejercicios">Ejercicios 
+		  <span class="material-icons">arrow_drop_down</span>
+		</button>
+		<div id="dropdown-container">
+			<button id="logicaDeProgramacion">Lógica de programación 
+				<span class="material-icons">arrow_drop_down</span>
+			</button>
+			<div id="logicaDeProgramacion-dropdown">
+				<a href="Tematy/Ejercicios_Logica_de_programacion/Ejercicios1.html">1/10</a>
+				<a href="Tematy/Ejercicios_Logica_de_programacion/Ejercicios2.html">2/10</a>
+				<a href="Tematy/Ejercicios_Logica_de_programacion/Ejercicios3.html">3/10</a>
+				<a href="Tematy/Ejercicios_Logica_de_programacion/Ejercicios4.html">4/10</a>
+				<a href="Tematy/Ejercicios_Logica_de_programacion/Ejercicios5.html">5/10</a>
+				<a href="Tematy/Ejercicios_Logica_de_programacion/Ejercicios6.html">6/10</a>
+				<a href="Tematy/Ejercicios_Logica_de_programacion/Ejercicios7.html">7/10</a>
+				<a href="Tematy/Ejercicios_Logica_de_programacion/Ejercicios8.html">8/10</a>
+				<a href="Tematy/Ejercicios_Logica_de_programacion/Ejercicios9.html">9/10</a>
+			</div>
+		</div>
+	  </div>
+</header>
+
   <main>
     <h1>Ejercicio 8/9</h1>
     <div class="row">
@@ -181,7 +216,33 @@
         </div>
     </div>
 </main>
-<sergey-import src="footerScripts"></sergey-import>
+<script>
+let ejercicios = document.getElementById("ejercicios");
+let ejerciciosDropdown = document.getElementById("dropdown-container");
+let logicaDeProgramacion = document.getElementById("logicaDeProgramacion");
+let logicaDeProgramacionDropdown = document.getElementById("logicaDeProgramacion-dropdown")
+
+ejercicios.addEventListener("click",function(){
+    if(ejerciciosDropdown.style.display == "block"){
+        ejerciciosDropdown.style.display = "none";
+    }else{
+        ejerciciosDropdown.style.display = "block";
+    }
+});
+
+logicaDeProgramacion.addEventListener("click",function(){
+    if(logicaDeProgramacionDropdown.style.display == "block"){
+        logicaDeProgramacionDropdown.style.display = "none";
+    }else{
+        logicaDeProgramacionDropdown.style.display = "block";
+    }
+})
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+      M.AutoInit();
+</script>
 <script src="Tematy/Ejercicios_Logica_de_programacion/JS/8.js"></script>
 </body>
 </html>
