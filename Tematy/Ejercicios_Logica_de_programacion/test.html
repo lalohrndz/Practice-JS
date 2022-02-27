@@ -5,47 +5,45 @@
     <sergey-import src="Metas/titles">test</sergey-import>
 </head>
 <body>
-    <sergey-import src="header">test</sergey-import>
+    <sergey-import src="header"></sergey-import>
+    <main>
+        <h1>test</h1>
+        <div class="row">
+            <div class="cards col 
+            s11
+            m9
+            l9
+            xl8
+            offset-s1
+            offset-m2
+            offset-l3
+            offset-xl3">
+                <div class="card" style="margin-right:3em;">
+                    <div class="card-content">
+                    <p> <b>1)</b> Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.</p>
+                    </div>
+                    <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width">
+                        <li class="tab"><a class="active" href="#1-1-run">Run</a></li>
+                        <li class="tab"><a href="#1-1-code">Código JS</a></li>
+                    </ul>
+                    </div>
+                    <div class="card-content grey lighten-4">
+                    <div id="1-1-run">
+                        <form onsubmit="return false">
+                            <label for="text-1-1-run">Ingresa tu texto.</label>
+                            <input id="text-1-1-run" type="text" class="validate">
+                            <button class="btn" onclick="nCaracteres()">Run</button>
+                        </form>
+                    </div>
+                    <div id="1-1-code">
 
-    <main class="row">
-        <div class="cards col 
-        s7 m8 l9 xl8
-        offset-s5
-        offset-m4
-        offset-l3
-        offset-xl3">
-            <div class="card" style="margin-right:3em;">
-                <div class="card-content">
-                <p> <b>1)</b> Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.</p>
-                </div>
-                <div class="card-tabs">
-                <ul class="tabs tabs-fixed-width">
-                    <li class="tab"><a class="active" href="#1-1-run">Run</a></li>
-                    <li class="tab"><a href="#1-1-code">Código JS</a></li>
-                </ul>
-                </div>
-                <div class="card-content grey lighten-4">
-                <div id="1-1-run">
-                    <form onsubmit="return false">
-                        <label for="text-1-1-run">Ingresa tu texto.</label>
-                        <input id="text-1-1-run" type="text" class="validate">
-                        <button class="btn" onclick="nCaracteres()">Run</button>
-                    </form>
-                </div>
-                <div id="1-1-code">
-                   <!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">                    <span style="color: #204a87; font-weight: bold">const</span> <span style="color: #000000">nCaracteres</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">()</span> <span style="color: #ce5c00; font-weight: bold">=&gt;</span> <span style="color: #000000; font-weight: bold">{</span>
-                    <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">text</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;text-1-1-run&quot;</span><span style="color: #000000; font-weight: bold">).</span><span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">;</span>
-                    <span style="color: #000000">M</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">toast</span><span style="color: #000000; font-weight: bold">({</span><span style="color: #000000">html</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #000000">La</span> <span style="color: #000000">palabra</span> <span style="color: #4e9a06">&quot;${text}&quot;</span> <span style="color: #000000">tiene</span> <span style="color: #000000">$</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">text</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #000000; font-weight: bold">}</span> <span style="color: #000000">caracteres</span><span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #000000; font-weight: bold">});</span>
-                    <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;Primer ejercicio - &quot;</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #000000">text</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #000000; font-weight: bold">);</span>
-                <span style="color: #000000; font-weight: bold">}</span>  
-</pre></div>
-
-                </div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
-
     <sergey-import src="footerScripts"></sergey-import>
     <script src="JS/1.js"></script>
 </body>

@@ -42,7 +42,8 @@ body {
 }
 
 h1{
-	margin-left: 44%;
+	display: flex;
+	justify-content: center;
 	font-size:xx-large;
 	margin-top: 1.3em;
 }
@@ -91,4 +92,8 @@ h1{
 #logicaDeProgramacion-dropdown{
 	display: none;
 	padding-left: 1.5em;
+}
+
+main{
+	margin-left: 200px;
 }

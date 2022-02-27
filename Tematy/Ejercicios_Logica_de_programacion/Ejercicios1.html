@@ -1,214 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--CDN MaterializeCSS-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="Assets/CSS/style.css">
-    <title>Ejercicios 1</title>
+  <sergey-import src="head"></sergey-import>
+  <sergey-import src="Metas/titles">Ejercicio 1</sergey-import>
 </head>
 <body>
-  <ul id="ejercicios" class="dropdown-content">
-    <li><a href="Ejercicios1.html">Ejercicios 1/10</a></li>
-    <li><a href="Ejercicios2.html">Ejercicios 2/10</a></li>
-    <li><a href="Ejercicios3.html">Ejercicios 3/10</a></li>
-    <li><a href="Ejercicios4.html">Ejercicios 4/10</a></li>
-    <li><a href="Ejercicios5.html">Ejercicios 5/10</a></li>
-    <li><a href="Ejercicios6.html">Ejercicios 6/10</a></li>
-    <li><a href="Ejercicios7.html">Ejercicios 7/10</a></li>
-    <li><a href="Ejercicios8.html">Ejercicios 8/10</a></li>
-    <li><a href="Ejercicios9.html">Ejercicios 9/10</a></li>
-  </ul>
+  <sergey-import src="header"></sergey-import>
+  <main>
+      <h1>Ejercicio 1/9</h1>
+      <div class="row">
+          <div class="cards col 
+          s12
+          m9
+          l9
+          xl8
+          offset-m2
+          offset-l2
+          offset-xl2">
+          <!-- 1° -->
+              <div class="card">
+                  <div class="card-content">
+                  <p> <b>1)</b> Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.</p>
+                  </div>
+                  <div class="card-tabs">
+                  <ul class="tabs tabs-fixed-width">
+                      <li class="tab"><a class="active" href="#1-1-run">Run</a></li>
+                      <li class="tab"><a href="#1-1-code">Código JS</a></li>
+                  </ul>
+                  </div>
+                  <div class="card-content grey lighten-4">
+                  <div id="1-1-run">
+                      <form onsubmit="return false">
+                          <label for="text-1-1-run">Ingresa tu texto.</label>
+                          <input id="text-1-1-run" type="text" class="validate">
+                          <button class="btn" onclick="nCaracteres()">Run</button>
+                      </form>
+                  </div>
+                  <div id="1-1-code">
+<!-- HTML generated using hilite.me -->
+<div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+  <pre style="margin: 0; line-height: 125%">
+  <span style="color: #204a87; font-weight: bold">const</span> <span style="color: #000000">nCaracteres</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">()</span> <span style="color: #ce5c00; font-weight: bold">=&gt;</span> <span style="color: #000000; font-weight: bold">{</span>
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">text</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;text-1-1-run&quot;</span><span style="color: #000000; font-weight: bold">).</span><span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #000000">M</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">toast</span><span style="color: #000000; font-weight: bold">({</span><span style="color: #000000">html</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #000000">La</span> <span style="color: #000000">palabra</span> <span style="color: #4e9a06">&quot;${text}&quot;</span> <span style="color: #000000">tiene</span> <span style="color: #000000">$</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">text</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #000000; font-weight: bold">}</span> <span style="color: #000000">caracteres</span><span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #000000; font-weight: bold">});</span>
+  <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;Primer ejercicio - &quot;</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #000000">text</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #000000; font-weight: bold">}</span>  
+</pre></div>
 
-  <ul id="ejercicios-mobile" class="dropdown-content">
-    <li><a href="Ejercicios1.html">Ejercicios 1/10</a></li>
-    <li><a href="Ejercicios2.html">Ejercicios 2/10</a></li>
-    <li><a href="Ejercicios3.html">Ejercicios 3/10</a></li>
-    <li><a href="Ejercicios4.html">Ejercicios 4/10</a></li>
-    <li><a href="Ejercicios5.html">Ejercicios 5/10</a></li>
-    <li><a href="Ejercicios6.html">Ejercicios 6/10</a></li>
-    <li><a href="Ejercicios7.html">Ejercicios 7/10</a></li>
-    <li><a href="Ejercicios8.html">Ejercicios 8/10</a></li>
-    <li><a href="Ejercicios9.html">Ejercicios 9/10</a></li>
-  </ul>
+                  </div>
+                  </div>
+              </div>
+          <!-- 2° -->
+              <div class="card">
+                <div class="card-content">
+                  <p> <b>2)</b> Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".</p>
+                </div>
+                <div class="card-tabs">
+                  <ul class="tabs tabs-fixed-width">
+                    <li class="tab"><a class="active" href="#1-2-run">Run</a></li>
+                    <li class="tab"><a href="#1-2-code">Código JS</a></li>
+                  </ul>
+                </div>
+                <div class="card-content grey lighten-4">
+                  <div id="1-2-run">
+                      <form onsubmit="return false">
+                          <label for="text-1-2-run">Ingresa tu texto.</label>
+                          <input id="text-1-2-run" type="text" class="validate">
+              
+                          <label for="number-1-2-run">Ingresa el número.</label>
+                          <input id="number-1-2-run" type="number" class="validate">
+                          <button class="btn" onclick="nSliceCaracteres()">Run</button>
+                      </form>
+                  </div>
+                  <div id="1-2-code">
+<!-- HTML generated using hilite.me -->
+<div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+  <pre style="margin: 0; line-height: 125%">                      
+  <span style="color: #204a87; font-weight: bold">const</span> <span style="color: #000000">nSliceCaracteres</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">()</span> <span style="color: #ce5c00; font-weight: bold">=&gt;</span><span style="color: #000000; font-weight: bold">{</span>
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">text</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;text-1-2-run&quot;</span><span style="color: #000000; font-weight: bold">).</span><span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">number</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;number-1-2-run&quot;</span><span style="color: #000000; font-weight: bold">).</span><span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">slicedText</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">text</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">slice</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #000000">number</span><span style="color: #000000; font-weight: bold">);</span>
+  <span style="color: #000000">M</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">toast</span><span style="color: #000000; font-weight: bold">({</span><span style="color: #000000">html</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #000000">De</span> <span style="color: #000000">la</span> <span style="color: #000000">frase</span> <span style="color: #4e9a06">&quot;${text}&quot;</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">si</span> <span style="color: #000000">recortamos</span> <span style="color: #000000">$</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">number</span><span style="color: #000000; font-weight: bold">}</span> <span style="color: #000000">quedar</span><span style="color: #a40000; border: 1px solid #ef2929">í</span><span style="color: #000000">a</span> <span style="color: #000000">as</span><span style="color: #a40000; border: 1px solid #ef2929">í</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">$</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">slicedText</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #000000; font-weight: bold">});</span>
+  <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;Segundo ejercicio - &quot;</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #000000">slicedText</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
 
-  <nav>
-    <div class="nav-wrapper">
-      <div class="left">
-        <img src="Assets/Img/logo_transparent_recortado.png" alt="EddPstr Logo" class="hide-on-med-and-down">
-        <p class="brand-logo center">Ejercicios 1</p>
+                  </div>
+                </div>
+              </div>
+          <!-- 3° -->
+              <div class="card">
+                <div class="card-content">
+                  <p> <b>3)</b> Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].</p>
+                </div>
+                <div class="card-tabs">
+                  <ul class="tabs tabs-fixed-width">
+                    <li class="tab"><a class="active" href="#1-3-run">Run</a></li>
+                    <li class="tab"><a href="#1-3-code">Código JS</a></li>
+                  </ul>
+                </div>
+                <div class="card-content grey lighten-4">
+                  <div id="1-3-run">
+                      <form onsubmit="return false">
+                          <label for="text-1-3-run">Ingresa tu texto.</label>
+                          <input id="text-1-3-run" type="text" class="validate">
+              
+                          <label for="char-1-3-run">Ingresa tu caracter de separación.</label>
+                          <input id="char-1-3-run" type="text" class="validate">
+                          <button class="btn" onclick="splitCaracteres()">Run</button>
+                      </form>
+                  </div>
+                  <div id="1-3-code">
+<!-- HTML generated using hilite.me -->
+<div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+  <pre style="margin: 0; line-height: 125%">                      
+  <span style="color: #204a87; font-weight: bold">const</span> <span style="color: #000000">splitCaracteres</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">()</span> <span style="color: #ce5c00; font-weight: bold">=&gt;</span><span style="color: #000000; font-weight: bold">{</span>
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">text</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;text-1-3-run&quot;</span><span style="color: #000000; font-weight: bold">).</span><span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #204a87; font-weight: bold">char</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;char-1-3-run&quot;</span><span style="color: #000000; font-weight: bold">).</span><span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">splitedText</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">text</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">split</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">char</span><span style="color: #000000; font-weight: bold">)</span>
+  <span style="color: #000000">M</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">toast</span><span style="color: #000000; font-weight: bold">({</span><span style="color: #000000">html</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #000000">Del</span> <span style="color: #000000">texto</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">$</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">text</span><span style="color: #000000; font-weight: bold">}</span> <span style="color: #000000">el</span> <span style="color: #000000">array</span> <span style="color: #000000">regresa</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">$</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">splitedText</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #000000; font-weight: bold">})</span>
+  <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;Tercer ejercicio - &quot;</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #000000">splitedText</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+                  </div>
+                </div>
+              </div>
+          <!-- 4° -->
+              <div class="card">
+                <div class="card-content">
+                  <p> <b>4)</b> Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.</p>
+                </div>
+                <div class="card-tabs">
+                  <ul class="tabs tabs-fixed-width">
+                    <li class="tab"><a class="active" href="#1-4-run">Run</a></li>
+                    <li class="tab"><a href="#1-4-code">Código JS</a></li>
+                  </ul>
+                </div>
+                <div class="card-content grey lighten-4">
+                  <div id="1-4-run">
+                      <form onsubmit="return false">
+                          <label for="text-1-4-run">Ingresa tu texto.</label>
+                          <input id="text-1-4-run" type="text" class="validate">
+              
+                          <label for="num-1-4-run">Ingresa el número de repeticiones</label>
+                          <input id="num-1-4-run" type="number" class="validate">
+                          <button class="btn" onclick="wordRepeater()">Run</button>
+                      </form>
+                  </div>
+                  <div id="1-4-code">
+<!-- HTML generated using hilite.me -->
+<div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+  <pre style="margin: 0; line-height: 125%">                     
+  <span style="color: #204a87; font-weight: bold">const</span> <span style="color: #000000">wordRepeater</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">()</span> <span style="color: #ce5c00; font-weight: bold">=&gt;</span> <span style="color: #000000; font-weight: bold">{</span>
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">text</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;text-1-4-run&quot;</span><span style="color: #000000; font-weight: bold">).</span><span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">number</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;num-1-4-run&quot;</span><span style="color: #000000; font-weight: bold">).</span><span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">textRepeated</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">text</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">repeat</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">number</span><span style="color: #000000; font-weight: bold">);</span>
+  <span style="color: #000000">M</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">toast</span><span style="color: #000000; font-weight: bold">({</span><span style="color: #000000">html</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #000000">$</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">textRepeated</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #000000; font-weight: bold">});</span>
+  <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;Cuarto ejercicio - &quot;</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #000000">textRepeated</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+                  </div>
+                </div>
+              </div>
+          </div>
       </div>
-
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="Index.html">Fundamentos JS</a></li>
-        <li><a href="Modulos.html">Modulos JS</a></li>
-        <li><a class="dropdown-trigger" href="#!" data-target="ejercicios">Ejercicios<i class="material-icons right">arrow_drop_down</i></a></li>
-      </ul>
-    </div>
-  </nav>
-  
-  <ul class="sidenav" id="mobile-demo">
-      <li><a href="Index.html">Fundamentos JS</a></li>
-      <li><a href="Modulos.html">Modulos JS</a></li>
-      <li><a class="dropdown-trigger" href="#!" data-target="ejercicios-mobile">Ejercicios<i class="material-icons right">arrow_drop_down</i></a></li>
-  </ul>
-
-      <main class="container">
-
-        <div class="title">
-            <h4>Ejercicios de Lógica de programación 1 / 10</h4>
-        </div>
-        
-        <div class="cards">
-          <div class="card">
-              <div class="card-content">
-                <p> <b>1)</b> Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.</p>
-              </div>
-              <div class="card-tabs">
-                <ul class="tabs tabs-fixed-width">
-                  <li class="tab"><a class="active" href="#1-1-run">Run</a></li>
-                  <li class="tab"><a href="#1-1-code">Código JS</a></li>
-                </ul>
-              </div>
-              <div class="card-content grey lighten-4">
-                <div id="1-1-run">
-                    <form onsubmit="return false">
-                        <label for="text-1-1-run">Ingresa tu texto.</label>
-                        <input id="text-1-1-run" type="text" class="validate">
-                        <button class="btn" onclick="nCaracteres()">Run</button>
-                    </form>
-                </div>
-                <div id="1-1-code">
-                  <code>
-                    const nCaracteres = () => {
-                      let text = document.getElementById("text-1-1-run").value;
-                      M.toast({html: `La palabra "${text}" tiene ${text.length} caracteres`});
-                      console.log("Primer ejercicio - ",text.length);
-                  }  
-                  </code>
-                </div>
-              </div>
-          </div>
-  
-          <div class="card">
-            <div class="card-content">
-              <p> <b>2)</b> Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".</p>
-            </div>
-            <div class="card-tabs">
-              <ul class="tabs tabs-fixed-width">
-                <li class="tab"><a class="active" href="#1-2-run">Run</a></li>
-                <li class="tab"><a href="#1-2-code">Código JS</a></li>
-              </ul>
-            </div>
-            <div class="card-content grey lighten-4">
-              <div id="1-2-run">
-                  <form onsubmit="return false">
-                      <label for="text-1-2-run">Ingresa tu texto.</label>
-                      <input id="text-1-2-run" type="text" class="validate">
-  
-                      <label for="number-1-2-run">Ingresa el número.</label>
-                      <input id="number-1-2-run" type="number" class="validate">
-                      <button class="btn" onclick="nSliceCaracteres()">Run</button>
-                  </form>
-              </div>
-              <div id="1-2-code">
-                <code>
-                  const nSliceCaracteres = () =>{
-                    let text = document.getElementById("text-1-2-run").value;
-                    let number = document.getElementById("number-1-2-run").value;
-                    let slicedText = text.slice(0,number);
-                    M.toast({html:`De la frase "${text}", si recortamos ${number} quedaría así: ${slicedText}`});
-                    console.log("Segundo ejercicio - ",slicedText);
-                }
-                </code>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="cards">
-          <div class="card">
-            <div class="card-content">
-              <p> <b>3)</b> Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].</p>
-            </div>
-            <div class="card-tabs">
-              <ul class="tabs tabs-fixed-width">
-                <li class="tab"><a class="active" href="#1-3-run">Run</a></li>
-                <li class="tab"><a href="#1-3-code">Código JS</a></li>
-              </ul>
-            </div>
-            <div class="card-content grey lighten-4">
-              <div id="1-3-run">
-                  <form onsubmit="return false">
-                      <label for="text-1-3-run">Ingresa tu texto.</label>
-                      <input id="text-1-3-run" type="text" class="validate">
-  
-                      <label for="char-1-3-run">Ingresa tu caracter de separación.</label>
-                      <input id="char-1-3-run" type="text" class="validate">
-                      <button class="btn" onclick="splitCaracteres()">Run</button>
-                  </form>
-              </div>
-              <div id="1-3-code">
-                <code>
-                  const splitCaracteres = () =>{
-                    let text = document.getElementById("text-1-3-run").value;
-                    let char = document.getElementById("char-1-3-run").value;
-                    let splitedText = text.split(char)
-                    M.toast({html:`Del texto: ${text} el array regresa: ${splitedText}`})
-                    console.log("Tercer ejercicio - ",splitedText);
-                }
-                </code>
-              </div>
-            </div>
-          </div>
-  
-          <div class="card">
-            <div class="card-content">
-              <p> <b>4)</b> Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.</p>
-            </div>
-            <div class="card-tabs">
-              <ul class="tabs tabs-fixed-width">
-                <li class="tab"><a class="active" href="#1-4-run">Run</a></li>
-                <li class="tab"><a href="#1-4-code">Código JS</a></li>
-              </ul>
-            </div>
-            <div class="card-content grey lighten-4">
-              <div id="1-4-run">
-                  <form onsubmit="return false">
-                      <label for="text-1-4-run">Ingresa tu texto.</label>
-                      <input id="text-1-4-run" type="text" class="validate">
-  
-                      <label for="num-1-4-run">Ingresa el número de repeticiones</label>
-                      <input id="num-1-4-run" type="number" class="validate">
-                      <button class="btn" onclick="wordRepeater()">Run</button>
-                  </form>
-              </div>
-              <div id="1-4-code">
-                <code>
-                  const wordRepeater = () => {
-                    let text = document.getElementById("text-1-4-run").value;
-                    let number = document.getElementById("num-1-4-run").value;
-                    let textRepeated = text.repeat(number);
-                    M.toast({html:`${textRepeated}`});
-                    console.log("Cuarto ejercicio - ",textRepeated);
-                }
-                </code>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        </main>
-        <!--CDN MaterializeCSS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script>
-            M.AutoInit();
-        </script>
-
-        <script src="Js/1 Ejercicios/1.js"></script>
+  </main>
+  <sergey-import src="footerScripts"></sergey-import>
+  <script src="Tematy/Ejercicios_Logica_de_programacion/JS/1.js"></script>
 </body>
 </html>
