@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="http://localhost:8080/Assets/CSS/style.css">
+  <title>
+    Ejercicio 5
+</title>
+<meta name="twitter:title" property="og:title" content='Ejercicio 5'>
+</head>
+<body>
+  <header>
+	<div class="sidenav-menu">
+		<img src="https://cdn.jsdelivr.net/gh/lalohrndz/CDNAssets@master/Personal/logo_recortado.png" alt="logo">
+		<base href="http://localhost:8080/">
+		<a href="index.html">Fundamentos</a>
+		<a href="modulos.html">Módulos</a>
+		<button id="asincronia"> Asincronía
+			<span class="material-icons">arrow_drop_down</span>
+		</button>
+		<div id="asincronia-dropdown">
+			<a href="Temary/Asincronia/Asincronía.html">Asincronía</a>
+			<a href="Temary/Asincronia/AsyncAwait.html">AsyncAwait</a>
+			<a href="Temary/Asincronia/Callbacks.html">Callbacks</a>
+			<a href="Temary/Asincronia/EventLoop.html">Eventloop</a>
+			<a href="Temary/Asincronia/Promesas.html">Promesas</a>
+		</div>
+		<button id="ejercicios">Ejercicios 
+		  <span class="material-icons">arrow_drop_down</span>
+		</button>
+		<div id="dropdown-container">
+			<button id="logicaDeProgramacion">Lógica de programación 
+				<span class="material-icons">arrow_drop_down</span>
+			</button>
+			<div id="logicaDeProgramacion-dropdown">
+				<a href="Temary/Ejercicios_Logica_de_programacion/Ejercicios1.html">1/10</a>
+				<a href="Temary/Ejercicios_Logica_de_programacion/Ejercicios2.html">2/10</a>
+				<a href="Temary/Ejercicios_Logica_de_programacion/Ejercicios3.html">3/10</a>
+				<a href="Temary/Ejercicios_Logica_de_programacion/Ejercicios4.html">4/10</a>
+				<a href="Temary/Ejercicios_Logica_de_programacion/Ejercicios5.html">5/10</a>
+				<a href="Temary/Ejercicios_Logica_de_programacion/Ejercicios6.html">6/10</a>
+				<a href="Temary/Ejercicios_Logica_de_programacion/Ejercicios7.html">7/10</a>
+				<a href="Temary/Ejercicios_Logica_de_programacion/Ejercicios8.html">8/10</a>
+				<a href="Temary/Ejercicios_Logica_de_programacion/Ejercicios9.html">9/10</a>
+			</div>
+		</div>
+	  </div>
+</header>
+
+  <main>
+    <h1>Ejercicio 5/9</h1>
+    <div class="row">
+        <div class="cards col 
+        s12
+        m9
+        l9
+        xl8
+        offset-m2
+        offset-l2
+        offset-xl2">
+          <!-- 1° -->
+          <div class="card">
+            <div class="card-content">
+              <p> <b>1)</b> Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10.</p>
+            </div>
+            <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a class="active" href="#5-1-run">Run</a></li>
+                <li class="tab"><a href="#5-1-code">Código JS</a></li>
+              </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+              <div id="5-1-run">
+                  <form onsubmit="return false">
+                      <label for="num-5-1-run">Ingresa tu número.</label>
+                      <input id="num-5-1-run" type="number" class="validate">
+                      
+                      <label for="baseNumber">Selecciona la base a convertir.</label>
+                      <select id="baseNumber">
+                          <option value="1">Binary</option>
+                          <option value="2">Decimal</option>
+                      </select>
+                      <button class="btn" onclick="binToDec()">Run</button>
+                  </form>
+              </div>
+              <div id="5-1-code">
+<!-- HTML generated using hilite.me -->
+<div style="background: #f8f8f8; overflow:auto;width:auto;border:solid #fcdb01;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+  <pre style="margin: 0; line-height: 125%">                  
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">num</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;num-5-1-run&quot;</span><span style="color: #000000; font-weight: bold">).</span><span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">baseToConvert</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;baseNumber&quot;</span><span style="color: #000000; font-weight: bold">).</span><span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">;</span>
+              
+  <span style="color: #000000">num</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">parseInt</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">num</span><span style="color: #000000; font-weight: bold">);</span>
+  <span style="color: #000000">baseToConvert</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">parseInt</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">baseToConvert</span><span style="color: #000000; font-weight: bold">);</span>
+
+  <span style="color: #204a87; font-weight: bold">if</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">baseToConvert</span> <span style="color: #ce5c00; font-weight: bold">===</span> <span style="color: #0000cf; font-weight: bold">1</span><span style="color: #000000; font-weight: bold">){</span>
+      <span style="color: #8f5902; font-style: italic">//convert to binary</span>
+      <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">result</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">num</span> <span style="color: #ce5c00; font-weight: bold">&gt;&gt;&gt;</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+      <span style="color: #000000">M</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">toast</span><span style="color: #000000; font-weight: bold">({</span><span style="color: #000000">html</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #000000">The</span> <span style="color: #000000">nummber</span> <span style="color: #000000">$</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">num</span><span style="color: #000000; font-weight: bold">}</span> <span style="color: #000000">to</span> <span style="color: #000000">binary</span> <span style="color: #000000">is</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">$</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">result</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">toString</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">2</span><span style="color: #000000; font-weight: bold">)}</span><span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #000000; font-weight: bold">});</span>
+      <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;First ex. - To binary&quot;</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #000000">result</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">toString</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">2</span><span style="color: #000000; font-weight: bold">));</span>
+  <span style="color: #000000; font-weight: bold">}</span>   
+  <span style="color: #204a87; font-weight: bold">else</span><span style="color: #000000; font-weight: bold">{</span>
+      <span style="color: #8f5902; font-style: italic">//Convert to decimal</span>
+      <span style="color: #000000">num</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">num</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">toString</span><span style="color: #000000; font-weight: bold">();</span>
+      <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">splittedNum</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">num</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">split</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;&quot;</span><span style="color: #000000; font-weight: bold">).</span><span style="color: #000000">reverse</span><span style="color: #000000; font-weight: bold">();</span>
+      <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">result</span><span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+      
+      <span style="color: #204a87; font-weight: bold">for</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span> <span style="color: #ce5c00; font-weight: bold">&lt;</span> <span style="color: #000000">splittedNum</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #000000; font-weight: bold">;</span> <span style="color: #000000">i</span><span style="color: #ce5c00; font-weight: bold">++</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #000000; font-weight: bold">{</span>
+          <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">actualVal</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">splittedNum</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">i</span><span style="color: #000000; font-weight: bold">]</span> <span style="color: #ce5c00; font-weight: bold">*</span> <span style="color: #204a87">Math</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">pow</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #0000cf; font-weight: bold">2</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #000000">i</span><span style="color: #000000; font-weight: bold">);</span>
+          <span style="color: #000000">result</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">result</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">actualVal</span><span style="color: #000000; font-weight: bold">;</span>
+          <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;First ex - iterator: &quot;</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #000000">i</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #4e9a06">&quot; number: &quot;</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #000000">splittedNum</span><span style="color: #000000; font-weight: bold">[</span><span style="color: #000000">i</span><span style="color: #000000; font-weight: bold">],</span> <span style="color: #4e9a06">&quot;actual val: &quot;</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #000000">actualVal</span><span style="color: #000000; font-weight: bold">,</span> <span style="color: #4e9a06">&quot; result: &quot;</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #000000">result</span><span style="color: #000000; font-weight: bold">);</span>
+      <span style="color: #000000; font-weight: bold">}</span>
+      <span style="color: #000000">M</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">toast</span><span style="color: #000000; font-weight: bold">({</span><span style="color: #000000">html</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #000000">The</span> <span style="color: #000000">nummber</span> <span style="color: #000000">$</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">num</span><span style="color: #000000; font-weight: bold">}</span> <span style="color: #000000">to</span> <span style="color: #000000">decimal</span> <span style="color: #000000">is</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">$</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">result</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #000000; font-weight: bold">});</span>
+  <span style="color: #000000; font-weight: bold">};</span>
+</pre></div>
+
+              </div>
+            </div>
+          </div>
+          <!-- 2° -->
+          <div class="card">
+            <div class="card-content">
+              <p> <b>2)</b> Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.</p>
+            </div>
+            <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a class="active" href="#5-2-run">Run</a></li>
+                <li class="tab"><a href="#5-2-code">Código JS</a></li>
+              </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+              <div id="5-2-run">
+                  <form onsubmit="return false">
+                      <label for="num-5-2-run">Ingresa tu total.</label>
+                      <input id="num-5-2-run" type="number" class="validate">
+        
+                      <label for="num_2-5-2-run">Ingresa tu descuento a aplicar.</label>
+                      <input id="num_2-5-2-run" type="number" class="validate">
+        
+                      <button class="btn" onclick="descount()">Run</button>
+                  </form>
+              </div>
+              <div id="5-2-code">
+<!-- HTML generated using hilite.me -->
+<div style="background: #f8f8f8; overflow:auto;width:auto;border:solid #fcdb01;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+  <pre style="margin: 0; line-height: 125%">                    
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">totalNumber</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;num-5-2-run&quot;</span><span style="color: #000000; font-weight: bold">).</span><span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">descountNumber</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;num_2-5-2-run&quot;</span><span style="color: #000000; font-weight: bold">).</span><span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">;</span>
+                
+  <span style="color: #000000">totalNumber</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">parseInt</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">totalNumber</span><span style="color: #000000; font-weight: bold">);</span>
+  <span style="color: #000000">descountNumber</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">parseInt</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">descountNumber</span><span style="color: #000000; font-weight: bold">);</span>
+
+  <span style="color: #204a87; font-weight: bold">if</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">totalNumber</span> <span style="color: #ce5c00; font-weight: bold">||</span> <span style="color: #000000">descountNumber</span> <span style="color: #ce5c00; font-weight: bold">&lt;=</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">){</span>
+      <span style="color: #000000">M</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">toast</span><span style="color: #000000; font-weight: bold">({</span><span style="color: #000000">html</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #000000">The</span> <span style="color: #000000">number</span> <span style="color: #000000">must</span> <span style="color: #000000">be</span> <span style="color: #000000">greater</span> <span style="color: #000000">than</span> <span style="color: #000000">zero</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #000000; font-weight: bold">})</span>
+  <span style="color: #000000; font-weight: bold">}</span><span style="color: #204a87; font-weight: bold">else</span><span style="color: #000000; font-weight: bold">{</span>
+      <span style="color: #000000">result</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">totalNumber</span> <span style="color: #ce5c00; font-weight: bold">-</span> <span style="color: #000000; font-weight: bold">((</span><span style="color: #000000">totalNumber</span> <span style="color: #ce5c00; font-weight: bold">*</span> <span style="color: #000000">descountNumber</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #ce5c00; font-weight: bold">/</span> <span style="color: #0000cf; font-weight: bold">100</span><span style="color: #000000; font-weight: bold">);</span>
+      <span style="color: #000000">M</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">toast</span><span style="color: #000000; font-weight: bold">({</span><span style="color: #000000">html</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #000000">El</span> <span style="color: #000000">$</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">descountNumber</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #ce5c00; font-weight: bold">%</span> <span style="color: #000000">de</span> <span style="color: #000000">$</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">totalNumber</span><span style="color: #000000; font-weight: bold">}</span> <span style="color: #000000">es</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">$</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">result</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #000000; font-weight: bold">});</span>
+      <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;Second ex - &quot;</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #000000">result</span><span style="color: #000000; font-weight: bold">);</span>
+  <span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+              </div>
+            </div>
+        </div>
+          <!-- 2.1° -->
+          <div class="card">
+            <div class="card-content">
+              <p> <b>2.1)</b> Programa una calculadora de propinas; ésta debe de tomar en cuenta el monto de la cuenta, el porcentaje de propina y el
+                número de personas que van a cooperar para la cuenta. Al final debe de regresar el total con la propina incluida y en caso de haber más de una
+                persona cooperando el monto dividido de la cuenta</p>
+            </div>
+            <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a class="active" href="#5-2_1-run">Run</a></li>
+                <li class="tab"><a href="#5-2_1-code">Código JS</a></li>
+              </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+              <div id="5-2_1-run">
+                  <form onsubmit="return false">
+                      <label for="num-5-2_1-run">Ingresa el total de la cuenta.</label>
+                      <input id="num-5-2_1-run" type="number" class="validate" min="1">
+        
+                      <label for="num-5-2_2-run">Ingresa el porcenate de propina.</label>
+                      <input id="num-5-2_2-run" type="number" class="validate" min="1">
+        
+                      <label for="num-5-2_3-run">Ingresa el número de personas.</label>
+                      <input id="num-5-2_3-run" type="number" class="validate" value="1" min="1" >
+        
+                      <button class="btn" onclick="tipCalculator()">Run</button>
+                  </form>
+              </div>
+              <div id="5-2_1-code">
+<!-- HTML generated using hilite.me -->
+<div style="background: #f8f8f8; overflow:auto;width:auto;border:solid #fcdb01;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+  <pre style="margin: 0; line-height: 125%">                    
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">totalNumber</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;num-5-2_1-run&quot;</span><span style="color: #000000; font-weight: bold">).</span><span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">totalNumber</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;num-5-2_1-run&quot;</span><span style="color: #000000; font-weight: bold">).</span><span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">tipNumber</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;num-5-2_2-run&quot;</span><span style="color: #000000; font-weight: bold">).</span><span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">peopleNumber</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;num-5-2_3-run&quot;</span><span style="color: #000000; font-weight: bold">).</span><span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">;</span>
+
+  <span style="color: #000000">totalNumber</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">parseInt</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">totalNumber</span><span style="color: #000000; font-weight: bold">);</span>
+  <span style="color: #000000">tipNumber</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">parseInt</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">tipNumber</span><span style="color: #000000; font-weight: bold">);</span>
+  <span style="color: #000000">peopleNumber</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">parseInt</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">peopleNumber</span><span style="color: #000000; font-weight: bold">);</span>
+
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">tip</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">totalNumber</span> <span style="color: #ce5c00; font-weight: bold">*</span> <span style="color: #000000">tipNumber</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #ce5c00; font-weight: bold">/</span> <span style="color: #0000cf; font-weight: bold">100</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">totalTicket</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">totalNumber</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">tip</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">totalPerPerson</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">totalTicket</span> <span style="color: #ce5c00; font-weight: bold">/</span> <span style="color: #000000">peopleNumber</span><span style="color: #000000; font-weight: bold">;</span>
+
+  <span style="color: #000000">M</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">toast</span><span style="color: #000000; font-weight: bold">({</span><span style="color: #000000">html</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #000000">The</span> <span style="color: #000000">amount</span> <span style="color: #000000">of</span> <span style="color: #000000">the</span> <span style="color: #000000">ticket</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">$</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">totalNumber</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #000000; font-weight: bold">});</span>
+  <span style="color: #000000">M</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">toast</span><span style="color: #000000; font-weight: bold">({</span><span style="color: #000000">html</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #000000">Tip</span> <span style="color: #ce5c00; font-weight: bold">%:</span> <span style="color: #000000">$</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">tipNumber</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #ce5c00; font-weight: bold">%</span><span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #000000; font-weight: bold">});</span>
+  <span style="color: #000000">M</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">toast</span><span style="color: #000000; font-weight: bold">({</span><span style="color: #000000">html</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #000000">Total</span> <span style="color: #000000">of</span> <span style="color: #000000">the</span> <span style="color: #000000">ticket</span> <span style="color: #204a87; font-weight: bold">with</span> <span style="color: #000000">the</span> <span style="color: #000000">tip</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">$</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">totalTicket</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #000000; font-weight: bold">});</span>
+  <span style="color: #000000">M</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">toast</span><span style="color: #000000; font-weight: bold">({</span><span style="color: #000000">html</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #000000">People</span> <span style="color: #000000">on</span> <span style="color: #000000">count</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">$</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">peopleNumber</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #000000; font-weight: bold">});</span>
+  <span style="color: #000000">M</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">toast</span><span style="color: #000000; font-weight: bold">({</span><span style="color: #000000">html</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #000000">Total</span> <span style="color: #000000">per</span> <span style="color: #000000">person</span><span style="color: #ce5c00; font-weight: bold">:</span> <span style="color: #000000">$</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">totalPerPerson</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #000000; font-weight: bold">});</span>
+
+  <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">group</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;Extra ex.&quot;</span><span style="color: #000000; font-weight: bold">);</span>
+  <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;total: &quot;</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #000000">totalNumber</span><span style="color: #000000; font-weight: bold">);</span>
+  <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;propa: &quot;</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #000000">tip</span><span style="color: #000000; font-weight: bold">);</span>
+  <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;total ticket: &quot;</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #000000">totalTicket</span><span style="color: #000000; font-weight: bold">);</span>
+  <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;Per person: &quot;</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #000000">totalPerPerson</span><span style="color: #000000; font-weight: bold">);</span>
+  <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">groupEnd</span><span style="color: #000000; font-weight: bold">();</span>
+</pre></div>
+
+              </div>
+            </div>
+        </div>
+          <!-- 3° -->
+          <div class="card">
+            <div class="card-content">
+              <p> <b>3)</b> Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).</p>
+            </div>
+            <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a class="active" href="#5-3-run">Run</a></li>
+                <li class="tab"><a href="#5-3-code">Código JS</a></li>
+              </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+              <div id="5-3-run">
+                  <form onsubmit="return false">
+                      <label for="date-5-3-run">Ingresa la fecha.</label>
+                      <input id="date-5-3-run" type="date" class="validate">
+        
+                      <button class="btn" onclick="yearsToNow()">Run</button>
+                  </form>
+              </div>
+              <div id="5-3-code">
+<!-- HTML generated using hilite.me -->
+<div style="background: #f8f8f8; overflow:auto;width:auto;border:solid #fcdb01;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+  <pre style="margin: 0; line-height: 125%">                  
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">inputDate</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">new</span> <span style="color: #204a87">Date</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;date-5-3-run&quot;</span><span style="color: #000000; font-weight: bold">).</span><span style="color: #000000">value</span><span style="color: #000000; font-weight: bold">);</span>
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">todayYear</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">new</span> <span style="color: #204a87">Date</span><span style="color: #000000; font-weight: bold">().</span><span style="color: #000000">getFullYear</span><span style="color: #000000; font-weight: bold">();</span>
+              
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">inputYear</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">new</span> <span style="color: #204a87">Date</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">inputDate</span><span style="color: #000000; font-weight: bold">).</span><span style="color: #000000">getFullYear</span><span style="color: #000000; font-weight: bold">();</span>
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">result</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">todayYear</span> <span style="color: #ce5c00; font-weight: bold">-</span> <span style="color: #000000">inputYear</span><span style="color: #000000; font-weight: bold">;</span>
+
+  <span style="color: #000000">M</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">toast</span><span style="color: #000000; font-weight: bold">({</span><span style="color: #000000">html</span><span style="color: #ce5c00; font-weight: bold">:</span><span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #000000">From</span> <span style="color: #000000">$</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">inputYear</span><span style="color: #000000; font-weight: bold">}</span> <span style="color: #000000">to</span> <span style="color: #000000">$</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">todayYear</span><span style="color: #000000; font-weight: bold">}</span> <span style="color: #000000">has</span> <span style="color: #000000">been</span> <span style="color: #000000">$</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">result</span><span style="color: #000000; font-weight: bold">}</span> <span style="color: #000000">years</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #000000; font-weight: bold">});</span>
+</pre></div>
+
+              </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</main>
+<script>
+let ejercicios = document.getElementById("ejercicios");
+let ejerciciosDropdown = document.getElementById("dropdown-container");
+let logicaDeProgramacion = document.getElementById("logicaDeProgramacion");
+let logicaDeProgramacionDropdown = document.getElementById("logicaDeProgramacion-dropdown");
+let asincronia = document.getElementById("asincronia");
+let asincroniaDropdown = document.getElementById("asincronia-dropdown");
+
+asincronia.addEventListener("click",function(){
+    if(asincroniaDropdown.style.display == "block"){
+        asincroniaDropdown.style.display = "none";
+    }else{
+        asincroniaDropdown.style.display = "block";
+    }
+});
+
+ejercicios.addEventListener("click",function(){
+    if(ejerciciosDropdown.style.display == "block"){
+        ejerciciosDropdown.style.display = "none";
+    }else{
+        ejerciciosDropdown.style.display = "block";
+    }
+});
+
+logicaDeProgramacion.addEventListener("click",function(){
+    if(logicaDeProgramacionDropdown.style.display == "block"){
+        logicaDeProgramacionDropdown.style.display = "none";
+    }else{
+        logicaDeProgramacionDropdown.style.display = "block";
+    }
+})
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+      M.AutoInit();
+</script>
+<script src="Temary/Ejercicios_Logica_de_programacion/JS/5.js"></script>
+</body>
+</html>

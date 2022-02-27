@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <sergey-import src="head"></sergey-import>
+  <sergey-import src="Metas/titles">Ejercicio 8</sergey-import>
+</head>
+<body>
+  <sergey-import src="header"></sergey-import>
+  <main>
+    <h1>Ejercicio 8/9</h1>
+    <div class="row">
+        <div class="cards col 
+        s12
+        m9
+        l9
+        xl8
+        offset-m2
+        offset-l2
+        offset-xl2">
+          <!-- 1° -->
+          <div class="card">
+            <div class="card-content">
+                <p> <b>1)</b> Programa una función que dado un arreglo de números devuelva un objeto con dos arreglos, el primero tendrá los numeros ordenados en forma ascendente y el segundo de forma descendiente, pe. miFuncion([7, 5,7,8,6]) devolverá { asc: [5,6,7,7,8], desc: [8,7,7,6,5] }.</p>
+            </div>
+            <div class="card-tabs">
+                <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a class="active" href="#8-1-run">Run</a></li>
+                <li class="tab"><a href="#8-1-code">Código JS</a></li>
+                </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+                <div id="8-1-run">
+                    <form onsubmit="return false">
+                        <label for="num-8-1-run">Ingresa tu número.</label>
+                        <input id="num-8-1-run" type="number" class="validate">
+                        <button class="btn" onclick="ascDescNumbers(document.getElementById('num-8-1-run').value)">Add number</button>
+                        <div style="margin-top:1em;">
+                            <p>Lista de números:</p>
+                            <div id="userList"></div>
+                            <hr>
+                            <p>Números ascendentes:</p>
+                            <div id="ascResultNumbers"></div>
+                            <hr>
+                            <p>Números descendientes:</p>
+                            <div id="descResultNumbers"></div>
+                            <hr>
+                          </div>
+                    </form>
+                </div>
+                <div id="8-1-code">
+<!-- HTML generated using hilite.me -->
+<div style="background: #f8f8f8; overflow:auto;width:auto;border:solid #fcdb01;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+  <pre style="margin: 0; line-height: 125%">                  
+  <span style="color: #204a87; font-weight: bold">const</span> <span style="color: #000000">ascDescNumbers</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">number</span><span style="color: #000000; font-weight: bold">)</span> <span style="color: #ce5c00; font-weight: bold">=&gt;</span><span style="color: #000000; font-weight: bold">{</span>
+  <span style="color: #204a87; font-weight: bold">this</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">number</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">number</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #000000">number</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">parseInt</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">number</span><span style="color: #000000; font-weight: bold">);</span>
+  <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">typeof</span> <span style="color: #000000">number</span><span style="color: #000000; font-weight: bold">);</span>
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">userResultList</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;userList&quot;</span><span style="color: #000000; font-weight: bold">);</span>
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">ascResultNumbers</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;ascResultNumbers&quot;</span><span style="color: #000000; font-weight: bold">);</span>
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">descResultNumbers</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;descResultNumbers&quot;</span><span style="color: #000000; font-weight: bold">);</span>
+
+  <span style="color: #000000">userList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">push</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">number</span><span style="color: #000000; font-weight: bold">);</span>
+  <span style="color: #000000">userResultList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #ce5c00; font-weight: bold">&lt;</span><span style="color: #000000">p</span><span style="color: #ce5c00; font-weight: bold">&gt;</span><span style="color: #000000">$</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">userList</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #ce5c00; font-weight: bold">&lt;</span><span style="color: #a40000; border: 1px solid #ef2929">/p&gt;`;</span>
+
+  <span style="color: #000000">ascNumbers</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">userList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">sort</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">fisrtNumber</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #000000">secondNumber</span><span style="color: #000000; font-weight: bold">){</span>
+      <span style="color: #204a87; font-weight: bold">return</span> <span style="color: #000000">fisrtNumber</span> <span style="color: #ce5c00; font-weight: bold">-</span> <span style="color: #000000">secondNumber</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #000000; font-weight: bold">});</span>
+  <span style="color: #000000">ascResultNumbers</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #ce5c00; font-weight: bold">&lt;</span><span style="color: #000000">p</span><span style="color: #ce5c00; font-weight: bold">&gt;</span><span style="color: #000000">$</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">ascNumbers</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #ce5c00; font-weight: bold">&lt;</span><span style="color: #a40000; border: 1px solid #ef2929">/p&gt;`;</span>
+
+  <span style="color: #000000">descNumbers</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">userList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">sort</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">function</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">fisrtNumber</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #000000">secondNumber</span><span style="color: #000000; font-weight: bold">){</span>
+      <span style="color: #204a87; font-weight: bold">return</span> <span style="color: #000000">secondNumber</span> <span style="color: #ce5c00; font-weight: bold">-</span> <span style="color: #000000">fisrtNumber</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #000000; font-weight: bold">});</span>
+  <span style="color: #000000">descResultNumbers</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #ce5c00; font-weight: bold">&lt;</span><span style="color: #000000">p</span><span style="color: #ce5c00; font-weight: bold">&gt;</span><span style="color: #000000">$</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">descNumbers</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #ce5c00; font-weight: bold">&lt;</span><span style="color: #a40000; border: 1px solid #ef2929">/p&gt;`;</span>
+  <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;First Ex. - &quot;</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #000000">userList</span><span style="color: #000000; font-weight: bold">);</span>
+  <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;First Ex. - &quot;</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #000000">ascNumbers</span><span style="color: #000000; font-weight: bold">);</span>
+  <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;First Ex. - &quot;</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #000000">descNumbers</span><span style="color: #000000; font-weight: bold">);</span>
+<span style="color: #000000; font-weight: bold">}</span>
+</pre></div>
+
+                </div>
+            </div>
+        </div>
+          <!-- 2° -->
+          <div class="card">
+            <div class="card-content">
+                <p> <b>2)</b> Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true].</p>
+            </div>
+            <div class="card-tabs">
+                <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a class="active" href="#8-2-run">Run</a></li>
+                <li class="tab"><a href="#8-2-code">Código JS</a></li>
+                </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+                <div id="8-2-run">
+                    <form onsubmit="return false">
+                        <label for="char-8-2-run">Ingresa tu número.</label>
+                        <input id="char-8-2-run" type="text" class="validate">
+                        <button class="btn" onclick="deleteRepeatedChars(document.getElementById('char-8-2-run').value)">Add Character</button>
+                        <div style="margin-top:1em;">
+                            <p>Lista de elementos:</p>
+                            <div id="charList"></div>
+                            <hr>
+                            <p>Lista filtrada:</p>
+                            <div id="resultList"></div>
+                          </div>
+                    </form>
+                </div>
+                <div id="8-2-code">
+<!-- HTML generated using hilite.me -->
+<div style="background: #f8f8f8; overflow:auto;width:auto;border:solid #fcdb01;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+  <pre style="margin: 0; line-height: 125%">                  
+  <span style="color: #204a87; font-weight: bold">this</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #204a87; font-weight: bold">char</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87; font-weight: bold">char</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">userList</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;charList&quot;</span><span style="color: #000000; font-weight: bold">);</span>
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">resultCharList</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;resultList&quot;</span><span style="color: #000000; font-weight: bold">);</span>
+  
+  <span style="color: #000000">charFilteredList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">add</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">char</span><span style="color: #000000; font-weight: bold">);</span>
+  <span style="color: #000000">charList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">push</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #204a87; font-weight: bold">char</span><span style="color: #000000; font-weight: bold">);</span>
+
+  <span style="color: #000000">resultList</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000; font-weight: bold">[...</span> <span style="color: #000000">charFilteredList</span><span style="color: #000000; font-weight: bold">];</span>
+
+  <span style="color: #000000">userList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #ce5c00; font-weight: bold">&lt;</span><span style="color: #000000">p</span><span style="color: #ce5c00; font-weight: bold">&gt;</span><span style="color: #000000">$</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">charList</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #ce5c00; font-weight: bold">&lt;</span><span style="color: #a40000; border: 1px solid #ef2929">/p&gt;`;</span>
+  <span style="color: #000000">resultCharList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #ce5c00; font-weight: bold">&lt;</span><span style="color: #000000">p</span><span style="color: #ce5c00; font-weight: bold">&gt;</span><span style="color: #000000">$</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">resultList</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #ce5c00; font-weight: bold">&lt;</span><span style="color: #a40000; border: 1px solid #ef2929">/p&gt;`</span>
+</pre></div>
+
+                </div>
+            </div>
+          </div>
+          <!-- 3° -->
+          <div class="card">
+            <div class="card-content">
+                <p> <b>3)</b> Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.</p>
+            </div>
+            <div class="card-tabs">
+                <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a class="active" href="#8-3-run">Run</a></li>
+                <li class="tab"><a href="#8-3-code">Código JS</a></li>
+                </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+                <div id="8-3-run">
+                    <form onsubmit="return false">
+                        <label for="num-8-3-run">Ingresa tu número.</label>
+                        <input id="num-8-3-run" type="number" class="validate">
+                        <button class="btn" onclick="promedio(document.getElementById('num-8-3-run').value)">Add Character</button>
+                        <div style="margin-top:1em;">
+                            <p>Lista de elementos:</p>
+                            <div id="numberList"></div>
+                            <hr>
+                            <p>Promedio actual</p>
+                            <div id="resultadoPromedio"></div>
+                          </div>
+                    </form>
+                </div>
+                <div id="8-3-code">
+<!-- HTML generated using hilite.me -->
+<div style="background: #f8f8f8; overflow:auto;width:auto;border:solid #fcdb01;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+  <pre style="margin: 0; line-height: 125%">                  
+  <span style="color: #204a87; font-weight: bold">this</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">number</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">number</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #000000">number</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">parseInt</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">number</span><span style="color: #000000; font-weight: bold">);</span>
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">numberList</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;numberList&quot;</span><span style="color: #000000; font-weight: bold">);</span>
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">resultadoPromedio</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #204a87">document</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">getElementById</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;resultadoPromedio&quot;</span><span style="color: #000000; font-weight: bold">);</span>
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">promedio</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #204a87; font-weight: bold">let</span> <span style="color: #000000">index</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #0000cf; font-weight: bold">0</span><span style="color: #000000; font-weight: bold">;</span>
+  
+  <span style="color: #000000">numbers</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">push</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #000000">number</span><span style="color: #000000; font-weight: bold">);</span>
+  <span style="color: #000000">numberList</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #ce5c00; font-weight: bold">&lt;</span><span style="color: #000000">p</span><span style="color: #ce5c00; font-weight: bold">&gt;</span><span style="color: #000000">$</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">numbers</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #ce5c00; font-weight: bold">&lt;</span><span style="color: #a40000; border: 1px solid #ef2929">/p&gt;`</span>
+
+  <span style="color: #000000">promedio</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">numbers</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">reduce</span><span style="color: #000000; font-weight: bold">((</span><span style="color: #000000">lastNumber</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #000000">currentNumber</span><span style="color: #000000; font-weight: bold">)</span><span style="color: #ce5c00; font-weight: bold">=&gt;</span><span style="color: #000000">lastNumber</span> <span style="color: #ce5c00; font-weight: bold">+</span> <span style="color: #000000">currentNumber</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #000000">index</span><span style="color: #000000; font-weight: bold">);</span>
+  <span style="color: #000000">result</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #000000">promedio</span> <span style="color: #ce5c00; font-weight: bold">/</span> <span style="color: #000000">numbers</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">length</span><span style="color: #000000; font-weight: bold">;</span>
+  <span style="color: #000000">resultadoPromedio</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">innerHTML</span> <span style="color: #ce5c00; font-weight: bold">=</span> <span style="color: #a40000; border: 1px solid #ef2929">`</span><span style="color: #ce5c00; font-weight: bold">&lt;</span><span style="color: #000000">p</span><span style="color: #ce5c00; font-weight: bold">&gt;</span><span style="color: #000000">$</span><span style="color: #000000; font-weight: bold">{</span><span style="color: #000000">result</span><span style="color: #000000; font-weight: bold">}</span><span style="color: #ce5c00; font-weight: bold">&lt;</span><span style="color: #a40000; border: 1px solid #ef2929">/p&gt;`;</span>
+
+  <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;number list: &quot;</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #000000">numbers</span><span style="color: #000000; font-weight: bold">);</span>
+  <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;promedio: &quot;</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #000000">promedio</span><span style="color: #000000; font-weight: bold">);</span>
+  <span style="color: #000000">console</span><span style="color: #000000; font-weight: bold">.</span><span style="color: #000000">log</span><span style="color: #000000; font-weight: bold">(</span><span style="color: #4e9a06">&quot;result: &quot;</span><span style="color: #000000; font-weight: bold">,</span><span style="color: #000000">result</span><span style="color: #000000; font-weight: bold">);</span>
+</pre></div>
+
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</main>
+<sergey-import src="footerScripts"></sergey-import>
+<script src="Temary/Ejercicios_Logica_de_programacion/JS/8.js"></script>
+</body>
+</html>

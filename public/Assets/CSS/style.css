@@ -65,7 +65,7 @@ h1{
 	max-width: 100%;
 }
 
-.sidenav-menu a, #ejercicios, #logicaDeProgramacion {
+.sidenav-menu a, #ejercicios, #logicaDeProgramacion, #asincronia {
 	padding: 6px 8px 6px 16px;
 	text-decoration: none;
 	font-size: 20px;
@@ -79,9 +79,14 @@ h1{
 	color:black;
 }
   
-.sidenav-menu a:hover, #ejercicios:hover, #logicaDeProgramacion:hover {
+.sidenav-menu a:hover, #ejercicios:hover, #logicaDeProgramacion:hover, #asincronia:hover {
 	color: #f1f1f1;
 	background-color: #5a5a5a;
+}
+
+#asincronia-dropdown{
+	display: none;
+	padding-left: 1.5em;
 }
 
 #dropdown-container{

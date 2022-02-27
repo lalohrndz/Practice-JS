@@ -2,7 +2,17 @@
 let ejercicios = document.getElementById("ejercicios");
 let ejerciciosDropdown = document.getElementById("dropdown-container");
 let logicaDeProgramacion = document.getElementById("logicaDeProgramacion");
-let logicaDeProgramacionDropdown = document.getElementById("logicaDeProgramacion-dropdown")
+let logicaDeProgramacionDropdown = document.getElementById("logicaDeProgramacion-dropdown");
+let asincronia = document.getElementById("asincronia");
+let asincroniaDropdown = document.getElementById("asincronia-dropdown");
+
+asincronia.addEventListener("click",function(){
+    if(asincroniaDropdown.style.display == "block"){
+        asincroniaDropdown.style.display = "none";
+    }else{
+        asincroniaDropdown.style.display = "block";
+    }
+});
 
 ejercicios.addEventListener("click",function(){
     if(ejerciciosDropdown.style.display == "block"){
