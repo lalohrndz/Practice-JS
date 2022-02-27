@@ -14,7 +14,7 @@ const setTimeOut = setTimeout(() => {
     M.toast({html:`setTimeOut de 3 segundos!`})
 }, 3000);
 
-const setInterval = setInterval(() => {
+const setInterval = window.setInterval(() => {
    M.toast({html:`setInterval de 2 segundos!`}) 
 }, 2000);
 
