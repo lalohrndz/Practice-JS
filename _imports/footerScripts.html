@@ -1,10 +1,12 @@
 <script>
 let ejercicios = document.getElementById("ejercicios");
-let ejerciciosDropdown = document.getElementById("dropdown-container");
+let ejerciciosDropdown = document.getElementById("lista-ejercicios");
 let logicaDeProgramacion = document.getElementById("logicaDeProgramacion");
 let logicaDeProgramacionDropdown = document.getElementById("logicaDeProgramacion-dropdown");
 let asincronia = document.getElementById("asincronia");
 let asincroniaDropdown = document.getElementById("asincronia-dropdown");
+let nuevosTipos = document.getElementById("nuevos-tipos");
+let nuevosTiposDropdown = document.getElementById("nuevos-tipos-dropdown");
 
 asincronia.addEventListener("click",function(){
     if(asincroniaDropdown.style.display == "block"){
@@ -27,6 +29,14 @@ logicaDeProgramacion.addEventListener("click",function(){
         logicaDeProgramacionDropdown.style.display = "none";
     }else{
         logicaDeProgramacionDropdown.style.display = "block";
+    }
+})
+
+nuevosTipos.addEventListener("click",function(){
+    if(nuevosTiposDropdown.style.display == "block"){
+        nuevosTiposDropdown.style.display = "none";
+    }else{
+        nuevosTiposDropdown.style.display = "block";
     }
 })
 </script>

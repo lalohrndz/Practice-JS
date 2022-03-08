@@ -41,12 +41,20 @@ body {
     
 }
 
+main{
+	margin-left: 200px;
+}
+
 h1{
 	display: flex;
 	justify-content: center;
 	font-size:xx-large;
 	margin-top: 1.3em;
 }
+
+/* 
+Side-nav
+*/
 
 .sidenav-menu {
 	height: 100%;
@@ -65,7 +73,11 @@ h1{
 	max-width: 100%;
 }
 
-.sidenav-menu a, #ejercicios, #logicaDeProgramacion, #asincronia {
+/* 
+Estilos a los botones del menú
+*/
+
+.sidenav-menu a, #ejercicios, #logicaDeProgramacion, #asincronia, #nuevos-tipos {
 	padding: 6px 8px 6px 16px;
 	text-decoration: none;
 	font-size: 20px;
@@ -78,8 +90,12 @@ h1{
 	outline: none;
 	color:black;
 }
+
+/* 
+Estilos aplicados al hacer hover
+*/
   
-.sidenav-menu a:hover, #ejercicios:hover, #logicaDeProgramacion:hover, #asincronia:hover {
+.sidenav-menu a:hover, #ejercicios:hover, #logicaDeProgramacion:hover, #asincronia:hover, #nuevos-tipos:hover {
 	color: #f1f1f1;
 	background-color: #5a5a5a;
 }
@@ -89,9 +105,14 @@ h1{
 	padding-left: 1.5em;
 }
 
-#dropdown-container{
+#lista-ejercicios{
 	display: none;
 	padding-left: 1em;
+}
+
+#logicaDeProgramacion{
+	display: block;
+	padding-left: 1.5em;
 }
 
 #logicaDeProgramacion-dropdown{
@@ -99,6 +120,7 @@ h1{
 	padding-left: 1.5em;
 }
 
-main{
-	margin-left: 200px;
+#nuevos-tipos-dropdown{
+	display: none;
+	padding-left: 1.5em;
 }

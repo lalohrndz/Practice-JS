@@ -18,11 +18,15 @@
   <main>
     <header>
 	<div class="sidenav-menu">
+		<!-- Config -->
 		<img src="https://cdn.jsdelivr.net/gh/lalohrndz/CDNAssets@master/Personal/logo_recortado.png" alt="logo">
 		<base href="http://localhost:8080/">
 <!-- 		<base href="https://practicejs-eddpstr.netlify.app/"> -->
+		<!-- Config -->
+
 		<a href="index.html">Fundamentos</a>
 		<a href="modulos.html">Módulos</a>
+
 		<button id="asincronia"> Asincronía
 			<span class="material-icons">arrow_drop_down</span>
 		</button>
@@ -33,15 +37,23 @@
 			<a href="Temary/Asincronia/EventLoop.html">Eventloop</a>
 			<a href="Temary/Asincronia/Promesas.html">Promesas</a>
 		</div>
-		<a href="Temary/Nuevos_Tipos/symbol.html">Symbols</a>
-		<a href="Temary/Nuevos_Tipos/set.html">Set</a>
-		<a href="Temary/Nuevos_Tipos/map.html">Map</a>
-		<a href="Temary/Nuevos_Tipos/weakSetnWeakMap.html">WeakMap & WeakSet</a>
-		<a href="Temary/Nuevos_Tipos/SymbolIterator.html">SymbolIterator</a>
+
+		<button id="nuevos-tipos"> Nuevos tipos
+			<span class="material-icons">arrow_drop_down</span>
+		</button>
+		<div id="nuevos-tipos-dropdown">
+			<a href="Temary/Nuevos_Tipos/symbol.html">Symbols</a>
+			<a href="Temary/Nuevos_Tipos/set.html">Set</a>
+			<a href="Temary/Nuevos_Tipos/map.html">Map</a>
+			<a href="Temary/Nuevos_Tipos/weakSetnWeakMap.html">WeakMap & WeakSet</a>
+			<a href="Temary/Nuevos_Tipos/SymbolIterator.html">SymbolIterator</a>
+			<a href="Temary/Nuevos_Tipos/generators.html">Generators</a>
+		</div>
+
 		<button id="ejercicios">Ejercicios 
 		  <span class="material-icons">arrow_drop_down</span>
 		</button>
-		<div id="dropdown-container">
+		<div id="lista-ejercicios">
 			<button id="logicaDeProgramacion">Lógica de programación 
 				<span class="material-icons">arrow_drop_down</span>
 			</button>
@@ -64,11 +76,13 @@
   </main>
   <script>
 let ejercicios = document.getElementById("ejercicios");
-let ejerciciosDropdown = document.getElementById("dropdown-container");
+let ejerciciosDropdown = document.getElementById("lista-ejercicios");
 let logicaDeProgramacion = document.getElementById("logicaDeProgramacion");
 let logicaDeProgramacionDropdown = document.getElementById("logicaDeProgramacion-dropdown");
 let asincronia = document.getElementById("asincronia");
 let asincroniaDropdown = document.getElementById("asincronia-dropdown");
+let nuevosTipos = document.getElementById("nuevos-tipos");
+let nuevosTiposDropdown = document.getElementById("nuevos-tipos-dropdown");
 
 asincronia.addEventListener("click",function(){
     if(asincroniaDropdown.style.display == "block"){
@@ -91,6 +105,14 @@ logicaDeProgramacion.addEventListener("click",function(){
         logicaDeProgramacionDropdown.style.display = "none";
     }else{
         logicaDeProgramacionDropdown.style.display = "block";
+    }
+})
+
+nuevosTipos.addEventListener("click",function(){
+    if(nuevosTiposDropdown.style.display == "block"){
+        nuevosTiposDropdown.style.display = "none";
+    }else{
+        nuevosTiposDropdown.style.display = "block";
     }
 })
 </script>
