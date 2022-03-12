@@ -17,3 +17,30 @@
 ? función es llamada. 
 */
 
+this.lugar = "Contexto Global"
+function saludar(saludo,aQuien){
+    console.log(`${saludo} ${aQuien}, estamos desde: ${this.lugar}`);
+}
+
+const obj ={
+    lugar:"Contexto Objeto"
+}
+saludar.call(null,"hola","pepe");
+saludar.call(obj,"hola","pepe");
+saludar.apply(null,["hola","pepe"]);
+saludar.apply(obj,["hola","pepe"]);
+
+const persona = {
+    nombre:"pepe",
+    saludar:function(){
+        console.log(`Hola ${this.nombre}`);
+    }
+}
+
+persona.saludar()
+
+const otraPersona = {
+    saludar: persona.saludar.bind(persona)
+}
+
+otraPersona.saludar()
