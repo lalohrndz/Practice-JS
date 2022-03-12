@@ -7,6 +7,8 @@ let asincronia = document.getElementById("asincronia");
 let asincroniaDropdown = document.getElementById("asincronia-dropdown");
 let nuevosTipos = document.getElementById("nuevos-tipos");
 let nuevosTiposDropdown = document.getElementById("nuevos-tipos-dropdown");
+let thisJS = document.getElementById("thisJS");
+let thisJSDropDown = document.getElementById("thisJS-dropdown");
 
 asincronia.addEventListener("click",function(){
     if(asincroniaDropdown.style.display == "block"){
@@ -39,6 +41,15 @@ nuevosTipos.addEventListener("click",function(){
         nuevosTiposDropdown.style.display = "block";
     }
 })
+
+thisJS.addEventListener("click",function(){
+    if(thisJSDropDown.style.display == "block"){
+        thisJSDropDown.style.display = "none";
+    }else{
+        thisJSDropDown.style.display = "block";
+    }
+})
+
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
