@@ -52,6 +52,23 @@ h1{
 	margin-top: 1.3em;
 }
 
+h2{
+	font-size: x-large;
+}
+
+#main-content{
+	margin-left: 2em;
+	margin-right: 1em;
+}
+
+#api-list{
+	margin-left: 1.5em;
+}
+
+#api-list li {
+	font-size: large;
+	list-style: circle;
+}
 /* 
 Side-nav
 */
@@ -77,7 +94,7 @@ Side-nav
 Estilos a los botones del menú
 */
 
-.sidenav-menu a, #ejercicios, #logicaDeProgramacion, #asincronia, #nuevos-tipos, #thisJS {
+.sidenav-menu a, #ejercicios, #logicaDeProgramacion, #asincronia, #nuevos-tipos, #thisJS, #dom {
 	padding: 6px 8px 6px 16px;
 	text-decoration: none;
 	font-size: 20px;
@@ -95,7 +112,7 @@ Estilos a los botones del menú
 Estilos aplicados al hacer hover
 */
   
-.sidenav-menu a:hover, #ejercicios:hover, #logicaDeProgramacion:hover, #asincronia:hover, #nuevos-tipos:hover, #thisJS:hover {
+.sidenav-menu a:hover, #ejercicios:hover, #logicaDeProgramacion:hover, #asincronia:hover, #nuevos-tipos:hover, #thisJS:hover, #dom:hover {
 	color: #f1f1f1;
 	background-color: #5a5a5a;
 }
@@ -126,6 +143,11 @@ Estilos aplicados al hacer hover
 }
 
 #thisJS-dropdown{
+	display: none;
+	padding-left: 1.5em;
+}
+
+#dom-dropdown{
 	display: none;
 	padding-left: 1.5em;
 }

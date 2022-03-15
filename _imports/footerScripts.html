@@ -9,6 +9,8 @@ let nuevosTipos = document.getElementById("nuevos-tipos");
 let nuevosTiposDropdown = document.getElementById("nuevos-tipos-dropdown");
 let thisJS = document.getElementById("thisJS");
 let thisJSDropDown = document.getElementById("thisJS-dropdown");
+let dom = document.getElementById("dom");
+let domDropdown = document.getElementById("dom-dropdown");
 
 asincronia.addEventListener("click",function(){
     if(asincroniaDropdown.style.display == "block"){
@@ -47,6 +49,14 @@ thisJS.addEventListener("click",function(){
         thisJSDropDown.style.display = "none";
     }else{
         thisJSDropDown.style.display = "block";
+    }
+})
+
+dom.addEventListener("click",function(){
+    if(domDropdown.style.display == "block"){
+        domDropdown.style.display = "none";
+    }else{
+        domDropdown.style.display = "block";
     }
 })
 

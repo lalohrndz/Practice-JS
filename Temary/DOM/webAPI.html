@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <sergey-import src="head"></sergey-import>
+    <sergey-import src="Metas/titles">Web API</sergey-import>
+</head>
+<body>
+    <sergey-import src="header">Web API</sergey-import>
+    <main>
+        <h1>Web API</h1>
+        <div id="main-content">
+            <h2><b>DOM:</b> Document Object Model</h2>
+            <h2><b>BOM:</b> Browser Object Model</h2>
+            <h2><b>CSSOM:</b> CSS Object Model</h2>
+            <h2>Web APIs</h2>
+            <ul id="api-list">
+                <li>Eventos</li>
+                <li>Forms</li>
+                <li>AJAX - Fetch</li>
+                <li>History</li>
+                <li>Web Storage</li>
+                <li>Geolocation</li>
+                <li>Drag & Drop</li>
+                <li>Indexed DB</li>
+                <li>Canvas</li>
+                <li>MatchMedia</li>
+                <li><a href="https://developer.mozilla.org/es/docs/Web/API" target="_blank">More...</a></li>
+            </ul>
+
+            <h2>Speech Synthesis</h2>
+            <form onsubmit="return false">
+                <label>Make the browser talk!</label>
+                <input type="text" id="text-talk" placeholder="Write something">
+                <button class="btn" onclick="talk()">Talk</button>
+            </form>
+
+        </div>
+    </main>
+    
+    <script src="Temary/DOM/JS/webAPI.js"></script>
+    <sergey-import src="footerScripts"></sergey-import>
+</body>
+</html>
