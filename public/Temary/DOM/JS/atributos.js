@@ -14,4 +14,7 @@ console.log(document.documentElement.lang);
 document.documentElement.setAttribute("lang","es-MX");
 console.log(document.documentElement.lang);
 
-const linkDOM = document.querySelector(".link-DOM").getAttribute("href");
+document.querySelector(".link-DOM").setAttribute("target","_blank");
+document.querySelector(".link-DOM").setAttribute("rel","noopener");
+document.querySelector(".link-DOM").setAttribute("href","www.google.com");
+
