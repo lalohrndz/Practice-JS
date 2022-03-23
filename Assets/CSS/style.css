@@ -13,16 +13,9 @@
 	white-space: nowrap;
 	direction: ltr;
 	vertical-align: sub;
-
-	/* Support for all WebKit browsers. */
 	-webkit-font-smoothing: antialiased;
-	/* Support for Safari and Chrome. */
 	text-rendering: optimizeLegibility;
-  
-	/* Support for Firefox. */
 	-moz-osx-font-smoothing: grayscale;
-  
-	/* Support for IE. */
 	font-feature-settings: 'liga';
 }
 
@@ -85,6 +78,11 @@ Side-nav
 	background-color: #fcdb01;
 	overflow-x: hidden;
 	padding-top: 20px;
+}
+
+#close-menu{
+	display: none !important;
+	background-color: red;
 }
 
 .sidenav-menu img{
@@ -152,4 +150,12 @@ Estilos aplicados al hacer hover
 #dom-dropdown{
 	display: none;
 	padding-left: 1.5em;
+}
+
+#navbar-burger{
+	display: none;
+}
+
+.mobile-background{
+	display: none;
 }

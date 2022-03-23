@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- <base href="http://localhost:8080/"> -->
-<base href="https://practicejs-eddpstr.netlify.app/">
+<base href="http://localhost:8080/">
+<!-- <base href="https://practicejs-eddpstr.netlify.app/"> -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="Assets/CSS/style.css">
@@ -17,7 +17,9 @@
 <body>
   <header>
 	<div class="sidenav-menu">
-		<!-- Config -->
+		<div id="close-menu">
+			<span><i class="material-icons">close</i></span>
+		</div>
 		<img src="https://cdn.jsdelivr.net/gh/lalohrndz/CDNAssets@master/Personal/logo_recortado.png" alt="logo">
 		<!-- <base href="http://localhost:8080/"> -->
 		<base href="https://practicejs-eddpstr.netlify.app/">
@@ -89,6 +91,11 @@
 			</div>
 		</div>
 	  </div>
+	  <!-- Mobile nav -->
+	  <div id="navbar-burger">
+		<span><i class="material-icons">menu</i></span>
+	  </div>
+
 </header>
 
   <main>
@@ -313,6 +320,25 @@ dom.addEventListener("click",function(){
         domDropdown.style.display = "block";
     }
 })
+
+</script>
+
+<script>
+    let $navbarBurger = document.getElementById("navbar-burger");
+    let $sidenavMenu = document.querySelector(".sidenav-menu");
+    let $closeSideMenu = document.querySelector("#close-menu");
+
+    $navbarBurger.addEventListener("click",function(){
+        $sidenavMenu.style.display = "block"
+        $sidenavMenu.classList.add("slide-in");
+        document.body.classList.add("mobile-background")
+    });
+
+    $closeSideMenu.addEventListener("click",function(){
+        console.log("de");
+        document.body.classList.remove("mobile-background");
+        $sidenavMenu.style.display = "none"
+    })
 
 </script>
 

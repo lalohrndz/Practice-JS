@@ -62,6 +62,25 @@ dom.addEventListener("click",function(){
 
 </script>
 
+<script>
+    let $navbarBurger = document.getElementById("navbar-burger");
+    let $sidenavMenu = document.querySelector(".sidenav-menu");
+    let $closeSideMenu = document.querySelector("#close-menu");
+
+    $navbarBurger.addEventListener("click",function(){
+        $sidenavMenu.style.display = "block"
+        $sidenavMenu.classList.add("slide-in");
+        document.body.classList.add("mobile-background")
+    });
+
+    $closeSideMenu.addEventListener("click",function(){
+        console.log("de");
+        document.body.classList.remove("mobile-background");
+        $sidenavMenu.style.display = "none"
+    })
+
+</script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script>
       M.AutoInit();

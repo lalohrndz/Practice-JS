@@ -1,0 +1,37 @@
+@media only screen and (max-width: 620px) {
+	#close-menu{
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	#close-menu i{
+		font-size: 30px;
+		cursor: pointer;
+	}
+
+	#navbar-burger{
+		display: block;
+		position: fixed;
+		margin-left: .3em;
+	}
+
+	.mobile-background{
+		position: absolute;
+		display: block;
+		background-color: #3e3e3e9e;
+	}
+
+	#navbar-burger i{
+		font-size: 30px !important;
+		cursor: pointer;
+	}
+	
+	.sidenav-menu{
+		display: none;
+	}
+
+	main{
+		margin-left: 2em;
+		margin-right: 2em;
+	}
+}  
