@@ -226,16 +226,17 @@ dom.addEventListener("click",function(){
 <script>
     const $base = document.getElementById("base");
     const locationHostName = location.hostname;
-    const consoleMessage = "%Hi dev";
-    const consoleStyle = "color:gold; font-size:40px"
 
     if(locationHostName == "localhost"){
         $base.removeAttribute("href");
-        $base.setAttribute("href","http://localhost:8080/")
+        $base.setAttribute("href","http://localhost:8080/");
+        console.log('%cWelcome dev','color:gold; font-size:40px');
+        console.log('%c(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧','color:gold; font-size:30px');
     }
 
     if(locationHostName == "practicejs-eddpstr.netlify.app"){
-        console.log(consoleMessage,consoleStyle);
+        console.log('%cWelcome dev','color:gold; font-size:40px');
+        console.log('%c(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧','color:gold; font-size:30px');
     }
 </script>
 
