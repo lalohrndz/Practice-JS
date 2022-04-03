@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<base href="https://practicejs-eddpstr.netlify.app/" id="base">
+<base href="http://localhost:8080/" id="base">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="Assets/CSS/style.css">
@@ -219,9 +219,9 @@ dom.addEventListener("click",function(){
     const $base = document.getElementById("base");
     const locationHostName = location.hostname;
 
-    if(locationHostName == "localhost"){
+    if(!locationHostName == "localhost"){
         $base.removeAttribute("href");
-        $base.setAttribute("href","http://localhost:8080/");
+        $base.setAttribute("href","localhost:8080/");
     }
 
     if(locationHostName == "practicejs-eddpstr.netlify.app"){

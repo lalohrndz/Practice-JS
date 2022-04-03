@@ -86,9 +86,9 @@ dom.addEventListener("click",function(){
     const $base = document.getElementById("base");
     const locationHostName = location.hostname;
 
-    if(locationHostName == "localhost"){
+    if(!locationHostName == "localhost"){
         $base.removeAttribute("href");
-        $base.setAttribute("href","http://localhost:8080/");
+        $base.setAttribute("href","localhost:8080/");
     }
 
     if(locationHostName == "practicejs-eddpstr.netlify.app"){
