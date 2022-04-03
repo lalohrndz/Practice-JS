@@ -81,22 +81,6 @@ dom.addEventListener("click",function(){
 
 </script>
 
-<!-- Change the HTML base tag if is localhost or deployed app-->
-<script>
-    const $base = document.getElementById("base");
-    const locationHostName = location.hostname;
-
-    if(!locationHostName == "practicejs-eddpstr.netlify.app"){
-        $base.removeAttribute("href");
-        $base.setAttribute("href","localhost:8080/");
-    }
-
-    if(locationHostName == "practicejs-eddpstr.netlify.app"){
-        console.log('%cWelcome dev','color:gold; font-size:40px');
-        console.log('%c(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧','color:gold; font-size:30px');
-    }
-</script>
-
 <!-- MaterializeCSS CDN & Initializer -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script>
