@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <base href="http://localhost:8080/">
@@ -9,13 +9,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="Assets/CSS/style.css">
-  <title>
-    Eventloop
+    <title>
+    Manejadores De Eventos
 </title>
-<meta name="twitter:title" property="og:title" content='Eventloop'>
+<meta name="twitter:title" property="og:title" content='Manejadores De Eventos'>
 </head>
 <body>
-  <main>
     <header>
 	<div class="sidenav-menu">
 		<div id="close-menu">
@@ -100,9 +99,17 @@
 
 </header>
 
-    <h1>Eventloop</h1>
-  </main>
-  <script>
+    <main>
+        <h1>Manejadores De Eventos</h1>
+
+        <button onclick='holaMundo(event)' class="btn">Evento con atributo HTML</button>
+        <hr>
+        <button id="eventoSemantico" class="btn">Evento con Manejador semántico</button>
+        <hr>
+        <button id="eventoMultiple" class="btn">Evento con Manejador Múltiple</button>
+    </main>
+    <script src="Temary/DOM/JS/ManejadoresDeEventos.js"></script>
+    <script>
 let ejercicios = document.getElementById("ejercicios");
 let ejerciciosDropdown = document.getElementById("lista-ejercicios");
 let logicaDeProgramacion = document.getElementById("logicaDeProgramacion");
@@ -189,6 +196,5 @@ dom.addEventListener("click",function(){
 <script>
       M.AutoInit();
 </script>
-  <script src="Temary/Asincronia/JS/EventLoop.js"></script>
 </body>
 </html>
