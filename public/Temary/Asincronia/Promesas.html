@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<base href="http://localhost:8080/">
-<!-- <base href="https://practicejs-eddpstr.netlify.app/"> -->
+<base href="https://practicejs-eddpstr.netlify.app/" id="base">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="Assets/CSS/style.css">
@@ -166,6 +165,7 @@ dom.addEventListener("click",function(){
 
 </script>
 
+<!-- side nav -->
 <script>
     let $navbarBurger = document.getElementById("navbar-burger");
     let $sidenavMenu = document.querySelector(".sidenav-menu");
@@ -178,13 +178,30 @@ dom.addEventListener("click",function(){
     });
 
     $closeSideMenu.addEventListener("click",function(){
-        console.log("de");
         document.body.classList.remove("mobile-background");
         $sidenavMenu.style.display = "none"
     })
 
 </script>
 
+<!-- Change the HTML base tag if is localhost or deployed app-->
+<script>
+    const $base = document.getElementById("base");
+    const locationHostName = location.hostname;
+    const consoleMessage = "%Hi dev";
+    const consoleStyle = "color:gold; font-size:40px"
+
+    if(locationHostName == "localhost"){
+        $base.removeAttribute("href");
+        $base.setAttribute("href","http://localhost:8080/")
+    }
+
+    if(locationHostName == "practicejs-eddpstr.netlify.app"){
+        console.log(consoleMessage,consoleStyle);
+    }
+</script>
+
+<!-- MaterializeCSS CDN & Initializer -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script>
       M.AutoInit();
