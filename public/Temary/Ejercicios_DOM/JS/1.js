@@ -14,4 +14,5 @@ $btn.addEventListener("click",e=>{
 
 $slideMenu.addEventListener("click",e=>{
     e.target.style.display = "none"
+    $icon.innerHTML = "add"
 })
