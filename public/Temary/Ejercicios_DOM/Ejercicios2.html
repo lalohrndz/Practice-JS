@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,11 +10,12 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="Assets/CSS/style.css">
     <title>
-    Map
+    Ejercicio 2
 </title>
-<meta name="twitter:title" property="og:title" content='Map'>
-</head>
-<body>
+<meta name="twitter:title" property="og:title" content='Ejercicio 2'>
+    <link rel="stylesheet" href="Temary/Ejercicios_DOM/CSS/2.css" />
+  </head>
+  <body>
     <header>
 	<div class="sidenav-menu">
 		<div id="close-menu">
@@ -110,10 +111,18 @@
 </header>
 
     <main>
-        <h1>Map</h1>
+      <h1>Ejercicio 2/X</h1>
+      <h2>Reloj Digital y alarma sonora</h2>
+
+      <div id="btns">
+        <button id="initReloj">Iniciar Reloj</button>
+        <button id="stopReloj">Detener Reloj</button>
+      </div>
+
+      <div id="RelojView">
+          <h3 id="Reloj"></h3>
+      </div>
     </main>
-    
-    <script src="Temary/Nuevos_Tipos/JS/map.js"></script>
     <script>
 let ejercicios = document.getElementById("ejercicios");
 let ejerciciosDropdown = document.getElementById("lista-ejercicios");
@@ -212,5 +221,6 @@ ejDOM.addEventListener("click",function(){
 <script>
       M.AutoInit();
 </script>
-</body>
+    <script src="Temary/Ejercicios_DOM/JS/2.js"></script>
+  </body>
 </html>
