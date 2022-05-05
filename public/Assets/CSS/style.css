@@ -94,7 +94,14 @@ Side-nav
 Estilos a los botones del menú
 */
 
-.sidenav-menu a, #ejercicios, #logicaDeProgramacion, #asincronia, #nuevos-tipos, #thisJS, #dom {
+.sidenav-menu a,
+#ejercicios,
+#logicaDeProgramacion,
+#asincronia,
+#nuevos-tipos,
+#thisJS,
+#dom,
+#DOM {
 	padding: 6px 8px 6px 16px;
 	text-decoration: none;
 	font-size: 20px;
@@ -112,44 +119,39 @@ Estilos a los botones del menú
 Estilos aplicados al hacer hover
 */
   
-.sidenav-menu a:hover, #ejercicios:hover, #logicaDeProgramacion:hover, #asincronia:hover, #nuevos-tipos:hover, #thisJS:hover, #dom:hover {
+.sidenav-menu a:hover,
+#ejercicios:hover,
+#logicaDeProgramacion:hover,
+#asincronia:hover,
+#nuevos-tipos:hover,
+#thisJS:hover,
+#dom:hover,
+#DOM:hover {
 	color: #f1f1f1;
 	background-color: #5a5a5a;
 }
 
-#asincronia-dropdown{
-	display: none;
-	padding-left: 1.5em;
-}
+/* 
+dropdowns menu
+*/
 
 #lista-ejercicios{
 	display: none;
 	padding-left: 1em;
 }
 
+#asincronia-dropdown,
+#logicaDeProgramacion-dropdown,
+#nuevos-tipos-dropdown,
+#thisJS-dropdown,
+#dom-dropdown,
+#DOM-dropdown{
+	display: none;
+	padding-left: 1.5em;
+}
+
 #logicaDeProgramacion{
 	display: block;
-	padding-left: 1.5em;
-}
-
-#logicaDeProgramacion-dropdown{
-	display: none;
-	padding-left: 1.5em;
-}
-
-#nuevos-tipos-dropdown{
-	display: none;
-	padding-left: 1.5em;
-}
-
-#thisJS-dropdown{
-	display: none;
-	padding-left: 1.5em;
-}
-
-#dom-dropdown{
-	display: none;
-	padding-left: 1.5em;
 }
 
 #navbar-burger{

@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- <base href="https://practicejs-eddpstr.netlify.app/"> -->
-<base href="http://localhost:8080/">
+<base href="https://practicejs-eddpstr.netlify.app/">
+<!-- <base href="http://localhost:8080/"> -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="Assets/CSS/style.css">
@@ -21,8 +21,8 @@
 			<span><i class="material-icons">close</i></span>
 		</div>
 		<img src="https://cdn.jsdelivr.net/gh/lalohrndz/CDNAssets@master/Personal/logo_recortado.png" alt="logo">
-		<!-- <base href="https://practicejs-eddpstr.netlify.app/"> -->
-		<base href="http://localhost:8080/">
+		<base href="https://practicejs-eddpstr.netlify.app/">
+		<!-- <base href="http://localhost:8080/"> -->
 		
 		<!-- Config -->
 		<a href="index.html">Fundamentos</a>
@@ -92,6 +92,12 @@
 				<a href="Temary/Ejercicios_Logica_de_programacion/Ejercicios7.html">7/10</a>
 				<a href="Temary/Ejercicios_Logica_de_programacion/Ejercicios8.html">8/10</a>
 				<a href="Temary/Ejercicios_Logica_de_programacion/Ejercicios9.html">9/10</a>
+			</div>
+			<button id="DOM">DOM
+				<span class="material-icons">arrow_drop_down</span>
+			</button>
+			<div id="DOM-dropdown">
+				<a href="Temary/Ejercicios_DOM/Ejercicios1.html">1/x</a>
 			</div>
 		</div>
 	  </div>
@@ -363,6 +369,8 @@ let thisJS = document.getElementById("thisJS");
 let thisJSDropDown = document.getElementById("thisJS-dropdown");
 let dom = document.getElementById("dom");
 let domDropdown = document.getElementById("dom-dropdown");
+let ejDOM = document.getElementById("DOM");
+let ejDOMDropdown = document.getElementById("DOM-dropdown");
 
 asincronia.addEventListener("click",function(){
     if(asincroniaDropdown.style.display == "block"){
@@ -409,6 +417,14 @@ dom.addEventListener("click",function(){
         domDropdown.style.display = "none";
     }else{
         domDropdown.style.display = "block";
+    }
+})
+
+ejDOM.addEventListener("click",function(){
+    if(ejDOMDropdown.style.display == "block"){
+        ejDOMDropdown.style.display = "none";
+    }else{
+        ejDOMDropdown.style.display = "block";
     }
 })
 

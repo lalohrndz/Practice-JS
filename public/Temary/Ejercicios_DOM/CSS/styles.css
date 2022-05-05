@@ -1,0 +1,53 @@
+#ejMenu{
+    background-color: gold;
+    float: right;
+    margin: .5em;
+    width: 2em;
+    height: 2em;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    cursor: pointer;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+    transition-property:background-color,width,height;
+    position: relative;
+    z-index: 2;
+}
+
+#ejMenu:hover{
+    background-color: rgb(227, 195, 15);
+    width: 2.1em;
+    height: 2.1em;
+}
+
+.slideM{
+    background-color: rgba(83, 83, 83, 0.831);
+    position: absolute;
+    z-index: 2;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.slideM>ul>li{
+    padding: 1rem;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+    transition-property:color;
+}
+
+.slideM>ul>li>a{
+    color:gold;
+    font-size: xx-large;
+}
+
+.slideM>ul>li:hover, a:hover{
+    background-color: black;
+}
+
