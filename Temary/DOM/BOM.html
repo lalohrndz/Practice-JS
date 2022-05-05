@@ -3,12 +3,38 @@
 <head>
     <sergey-import src="head"></sergey-import>
     <sergey-import src="Metas/titles">Manejo BOM</sergey-import>
+    <style>
+        .btns{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-content: space-around;
+        }
+
+    </style>
 </head>
 <body>
     <sergey-import src="header">Manejo BOM</sergey-import>
     <main>
         <h1>Manejo BOM</h1>
         <h3 style="width:3000px">Barra</h3>
+
+        <div class="btns">
+            <button id="clear">Limpiar consola</button>
+            <br>
+            <button id="abrir">Abrir ventana</button>
+            <br>
+            <button id="cerrar">Cerrar ventana</button>
+            <br>
+            <button id="imprimir">Imprimir ventana</button>
+            <br>
+            <button id="objsNav">Objetos del navegador</button>
+            <br>
+            <button id="historia">Historial</button>
+            <br>
+            <button id="navegador">Navegador</button>
+            <br>
+        </div>
     </main>
     <script src="Temary/DOM/JS/BOM.js"></script>
     <sergey-import src="footerScripts"></sergey-import>
